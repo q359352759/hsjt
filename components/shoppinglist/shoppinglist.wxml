@@ -1,0 +1,14 @@
+<view class="shoping_list" >
+        <view class="shoping_title">
+            <view class="shopping_list_text">
+                    <image src="../../images/shopping/11.png" style="width:25px;height:28px;margin-right:10rpx;"></image>
+                    <text class="shopping_list_text">热门商铺</text>
+            </view>
+          <text class="shopping_list_text_more">更多></text>
+        </view>
+         <view style="display: flex;">
+           <slot></slot>
+        </view>
+         <!-- <view class="affse"></view> -->
+    </view>
+    

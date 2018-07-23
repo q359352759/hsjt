@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "addressItems": "../../components/addressItems/addressItems"
+      },
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00a2e9",
+    "navigationBarTitleText": "收货地址",
+    "navigationBarTextStyle": "white"
+}

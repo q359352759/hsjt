@@ -1,0 +1,142 @@
+/* components/shoppingitem/shoppingitem.wxss */
+.shopping_item{
+
+
+}
+.shoping_item_c {
+
+    margin-left: 20rpx; 
+}
+.shoping_item_c image{
+    width:351rpx;
+    height:242rpx;
+
+}
+.nullpic{
+  
+     width: 351rpx;
+    height: 242rpx;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 242rpx;
+    
+}
+.shopping_item_text{
+    display: flex;
+    flex-direction: column;
+    width:351rpx;
+   
+}
+.item_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.item_text_tiltl{
+    font-size: 28rpx;
+    color: black;
+    text-align: center;
+}
+.item_text_detail{
+    width: 200rpx;
+    font-size: 26rpx;
+    height: 50rpx;
+    color: #5b5b5b;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.shopping_detail{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.item_money{
+    display: flex;
+    flex-direction: row;
+    flex-grow:1;
+
+
+}
+.item_xiaoliang{
+    display: flex;
+    flex-direction: row;
+     align-items: center;
+    justify-content: center;
+    margin-right:32rpx;
+
+}
+.shopping_name{
+    width: 300rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    font-size:28rpx;
+    color: black;
+    
+}
+.newPrice{
+    font-size: 26rpx;
+    color: #da580c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30rpx;
+
+}
+
+.oldPrice{
+    font-size: 21rpx;
+    color: #5b5b5b;
+    padding-left: 10rpx;
+    margin-top: 11rpx;
+    text-decoration: line-through;
+}
+.free_shipping{
+    margin: 10rpx; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.bao{
+    margin-left: 20rpx;
+    border: 1px solid red;
+    font-size: 28rpx;
+    height: 30rpx;
+    width: 80rpx;
+    text-align: center;
+    line-height: 30rpx;
+    border-radius:20rpx;
+    color: red;
+}
+.directly{
+    margin-right: 20rpx;
+    border: 1px solid red;
+    font-size: 28rpx;
+    height: 30rpx;
+    width: 120rpx;
+    text-align: center;
+    background: red;
+    line-height: 30rpx;
+    border-radius: 20rpx;
+    color: white;
+}
+.shopping_x{
+    width: 40rpx;
+    height: 45rpx;
+    background: #31abea;
+    font-size: 25rpx;
+    color: white;
+    text-align: center;
+    line-height: 45rpx;
+
+}
+.shopping_num{
+    font-size: 22rpx;
+    color: #c2c2c2;
+}

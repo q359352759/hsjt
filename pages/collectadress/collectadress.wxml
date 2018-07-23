@@ -1,0 +1,10 @@
+
+<view class="addheader" bindtap="addAddress">
+    <text>新增</text>
+</view>
+<view class="main">
+
+    <block wx:for="{{addressdata}}" wx:key="{{item.id}}">
+       <addressItems   item="{{item}}" binduapdata="uapdata" binddel="del" bindradio="radio" index="{{index}}"></addressItems>  
+    </block> 
+</view>

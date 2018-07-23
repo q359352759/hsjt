@@ -1,0 +1,32 @@
+/* components/shoppinglist/shoppinglist.wxss */
+.shoping_list{
+    /* margin-top: 30rpx; */
+    /* margin-bottom: 30rpx; */
+     /* height: 500rpx; */
+}
+.shopping_list_text{
+    font-size: 34rpx;
+    color: black;
+    text-align: center;
+    flex-grow: 1;
+}
+.shopping_list_text_more{
+    font-size: 25rpx;
+    color: black;
+    text-align: center;
+    margin-right: 10rpx;
+   
+}
+.shoping_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10rpx;
+    background: #f3f7f2;
+   
+}
+.affse{
+    height: 30rpx;
+    background:#f2f2f2;
+}

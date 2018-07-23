@@ -1,0 +1,26 @@
+<view class="spacing"></view>
+<view class="conter">
+    <view class="conter_l">
+        <view class="userpic">
+                <radio-group class="radio-group "bindchange="radioChange">
+                        <label class="radio"  >
+                          <checkbox  value="{{index}}"  /> 
+                        </label>
+                      </radio-group>
+        </view>
+
+        <view class="userdata">
+            <text>{{item.shipto}}</text>
+            <text>{{item.address}}</text>
+        </view>
+    </view>
+    <view class="conter_r userdata">
+        <text style=" font-size: 35rpx;">{{item.phone}}</text>
+        <view class="btn conter_r userdata">
+                <text class="upadata" catchtap="handelClickUpdata">修改</text>
+                <text class="upadata" catchtap="handelClicDel">删除</text>
+
+        </view>
+      
+    </view>
+</view>

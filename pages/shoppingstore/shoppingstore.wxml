@@ -1,0 +1,137 @@
+
+ <!-- 轮播 -->
+ <view style="width:100%;height:296rpx">
+    <swiper circular indicator-dots indicator-color="white" indicator-active-color="red" autoplay interval="2000">
+        <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+            <swiper-item>
+                <image src="{{item}}" style="width:750rpx;height:380rpx"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!-- 分类 -->
+      <view>
+            <view class="page">
+                            <view class="nav">
+                                    
+                                    <view class="nav-son {{shownavindex == 2? 'active' : ''}} swiper-tab" bindtap="list" data-nav="2">
+                                            <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}} content" data-current="0" bindtap="swichNav">
+                                                <!-- <view class="content {{currentTab==0 ? 'on' : ''}}" >全部宝贝</view>  -->
+                                                全部宝贝
+                                            </view>              
+                                      </view>
+
+                                      <view class="nav-son  {{shownavindex == 2? 'active' : ''}} swiper-tab" bindtap="listnews" data-nav="2" >
+                                                    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} content" data-current="1" bindtap="swichNav">
+                                                                    <!-- <view class="content {{currentTab==0 ? 'on' : ''}}">新品</view> -->
+                                                                    新品
+                                                    </view>                                 
+                                      </view>
+                                    <view class="nav-son {{shownavindex == 3? 'active' : ''}} swiper-tab" bindtap="listpx" data-nav="3">
+                                                    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}} content" data-current="2" bindtap="swichNav">
+                                                                    <!-- <view class="content {{currentTab==0 ? 'on' : ''}}">促销</view> -->
+                                                                    促销
+                                                    </view>                
+                                    </view>
+                                    <view class="nav-son {{shownavindex == 1? 'active' : ''}} swiper-tab" bindtap="listqy" data-nav="1">
+                                            <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}} content" data-current="3" bindtap="swichNav">
+                                                {{citytitle}}
+                                            </view>                          
+                                    </view>
+                            </view>
+                            <!-- 级联菜单 -->
+                            <view class="quyu {{qyopen ? 'slidown' : 'slidup'}} {{qyshow ? 'disappear':''}}" >
+                              <view class="qy quyu-left" >
+                                <view class="{{select1 == index ? 'current' : ''}}"   data-city='{{index}}' wx:key="item" wx:for="{{city}}" wx:for-item="item" bindtap="handeclickOne">
+                                  {{item.name}}
+                                </view>
+                              </view>
+                              <view class="qy quyu-center">
+                                <view class="{{select2 == index ? 'current2' : ''}}"  data-city='{{index}}' wx:key="item"  wx:for="{{city[num].child}}" wx:for-item="item" bindtap="handeclicTwo">
+                                
+                                  {{item.name}}
+                                </view>
+                              </view>
+                              <view class="qy quyu-right">
+                                <view class="{{select3 == index ? 'current3' : ''}} {{qyshow ? 'disappear':''}}" wx:key="item" data-city='{{index}}' data-item="{{item}}" wx:for="{{city[num].child[nums].child}}" wx:for-item="item" bindtap="handeclicKTree">     
+                                  {{item.name}}
+                                </view>
+                              </view>
+                          
+              </view>
+            </view>
+            <!-- 销量菜单 -->
+            <view class="pages">
+              <view class="list">
+                  <view  data-index="0" data-num="1" class="list-menu1 {{_num==1?'cur':''}}" bindtap="tapMainMenu">综合</view>
+                  <view   data-index="1" data-num="2" class="list-menu2 {{_num==2?'cur':''}}" bindtap="tapMainMenu">销量</view>
+                  <view   data-index="2" data-num="3" class="list-menu3 {{_num==3?'cur':''}}" bindtap="tapMainMenu">价格</view>
+              </view>
+             </view>  
+
+        <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px"  bindchange="bindChange"> 
+         
+                <!-- 全部宝贝 -->
+                <swiper-item > 
+                    <!-- 全部宝贝的综合数据 -->
+                    <scroll-view wx:if="{{_num==1}}" scroll-y style="height:900rpx"  bindscrolltolower="lowerAllgoods"> 
+                        <block wx:for="{{[Allgoods]}}" wx:key="{{item._id}}" >  
+                            <view class="goods"  >
+                                    <shoppingItemGoods  wx:for="{{item.rows}}" wx:key="{{item._id}}"  item="{{item}}" bindhandeClick="handeClick"></shoppingItemGoods>                      
+                            </view>
+                            </block>
+
+                    </scroll-view>
+                   
+                            <!-- 全部宝贝的销量数据 -->
+                            <scroll-view wx:if="{{_num==2}}" scroll-y style="height:900rpx"  bindscrolltolower="lower"> 
+                                    <block wx:for="{{[Allgoods.All]}}" wx:key="{{item._id}}" >  
+                                        <view class="goods"  >
+                                            <!-- <text>All</text> -->
+                                                <shoppingItemGoods  wx:for="{{item.Salesrows}}" wx:key="{{item._id}}"  item="{{item}}" bindhandeClick="handeClick"></shoppingItemGoods>                      
+                                        </view>
+                                        </block>
+                                        <!-- sdfsadfsa -->
+                            </scroll-view>
+                             <!-- 全部宝贝的价格数据 -->
+                             <scroll-view wx:if="{{_num==3}}" scroll-y style="height:900rpx"  bindscrolltolower="lower"> 
+                                    <block wx:for="{{[Allgoods.Price]}}" wx:key="{{item._id}}" >  
+                                        <view class="goods"  >
+                                            <!-- <text>Price</text> -->
+                                                <shoppingItemGoods  wx:for="{{item.Pricerows}}" wx:key="{{item._id}}"  item="{{item}}" bindhandeClick="handeClick"></shoppingItemGoods>                      
+                                        </view>
+                                        </block>
+                             </scroll-view>
+
+                </swiper-item> 
+                <!-- 新品同上操作-->
+                <swiper-item> 
+                        <scroll-view  scroll-y style="height:900rpx" bindscrolltolower="lower"> 
+                            <block wx:for="{{[newGoods]}}" wx:key="{{item._id}}" >  
+                                <view class="goods">
+                                        <shoppingItemGoods  wx:for="{{item.rows}}" wx:key="{{item._id}}"  item="{{item}}" bindhandeClick="handeClick"></shoppingItemGoods>                      
+                                </view>
+                                </block>
+                        </scroll-view>                 
+                       
+                </swiper-item> 
+                 <!-- 促销 -->
+                  <swiper-item>
+                        <scroll-view  scroll-y style="height:900rpx" bindscrolltolower="lower"> 
+                                <block wx:for="{{[Allgoods]}}" wx:key="{{item._id}}" >  
+                                    <view class="goods">
+                                            <shoppingItemGoods  wx:for="{{item.rows}}" wx:key="{{item._id}}"  item="{{item}}" bindhandeClick="handeClick"></shoppingItemGoods>                      
+                                    </view>
+                                    </block>
+                            </scroll-view>      
+                  </swiper-item>
+                   <!-- 分类 -->
+                  <swiper-item>
+                      <text>分类</text>
+                  </swiper-item>    
+            </swiper> 
+
+
+</view>
+

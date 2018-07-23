@@ -1,0 +1,77 @@
+<view class="header">
+        <view class="home_shoping">
+                <image src="../../images/hou.png" class="home_pic"></image>
+                <!-- <text class="home_pic_text"> 餐饮</text> -->
+        </view>
+
+        <view class="home_shoping">
+                <image src="../../images/shopping/1.png" class="home_pic"></image>
+                <text class="home_pic_text"> 餐饮</text>
+        </view>
+        <view class="home_shoping">
+                <image src="../../images/shopping/2.png" class="home_pic"></image>
+                <text class="home_pic_text"> 休闲娱乐</text>
+            </view>
+            <view class="home_shoping">
+                <image src="../../images/shopping/3.png" class="home_pic"></image>
+                <text class="home_pic_text"> 酒店</text>
+            </view>
+            <view class="home_shoping">
+                <image src="../../images/shopping/4.png" class="home_pic"></image>
+                <text class="home_pic_text"> 旅游</text>
+            </view> 
+            <view class="home_shoping">
+                    <image src="../../images/shopping/5.png" class="home_pic"></image>
+                    <text class="home_pic_text"> 丽人</text>
+           </view> 
+</view>
+<view class="class_menu">
+        <dl class="menu">
+                <dt data-index="0" bindtap="tapMainMenu">二级分类<i></i></dt>
+                <dd class="{{subMenuDisplay[0]}}">
+                        <ul>
+                            <li class="{{subMenuHighLight[0][0]}}" data-index="0-0" bindtap="tapSubMenu">二级分类</li>
+                           
+                        </ul>
+                    </dd>
+           <dt data-index="1" bindtap="tapMainMenu">附近<i></i></dt>
+           <dd class="{{subMenuDisplay[1]}}">
+                <ul>
+                    <!-- <li class="{{subMenuHighLight[1][0]}}" data-index="1-0" bindtap="tapSubMenu">附近</li> -->
+                    <li class="{{subMenuHighLight[1][0]}}" data-index="1-1" bindtap="tapSubMenu">1km以内</li>
+                    <li class="{{subMenuHighLight[1][1]}}" data-index="1-1" bindtap="tapSubMenu">5km以内</li>
+                   
+                </ul>
+            </dd>
+            <dt data-index="2" bindtap="tapMainMenu">排序<i></i></dt>
+            <dd class="{{subMenuDisplay[2]}}">
+                    <ul>
+                        <li class="{{subMenuHighLight[2][0]}}" data-index="2-0" bindtap="tapSubMenu">时间排序</li>
+                        <li class="{{subMenuHighLight[2][1]}}" data-index="2-1" bindtap="tapSubMenu">销量排序</li>
+                        <li class="{{subMenuHighLight[2][2]}}" data-index="2-2" bindtap="tapSubMenu">好评率</li>
+                       
+                    </ul>
+                </dd>
+            <dt data-index="3" bindtap="tapMainMenu">筛选<i></i></dt>
+            <dd class="{{subMenuDisplay[3]}}">
+                    <ul>
+                        <li class="{{subMenuHighLight[3][0]}}" data-index="3-0" bindtap="tapSubMenu">好评</li>
+                        <li class="{{subMenuHighLight[3][1]}}" data-index="3-1" bindtap="tapSubMenu">热门</li>
+                       
+                    </ul>
+                </dd>
+       
+            </dl>
+            
+
+           
+       
+</view>
+<view >
+        <storeItems></storeItems>
+        <storeItems></storeItems>
+        <storeItems></storeItems>
+        <storeItems></storeItems>
+</view>
+
+

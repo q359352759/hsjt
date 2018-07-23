@@ -1,0 +1,89 @@
+/* .log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+} */
+.logines image{
+  width: 750rpx;
+  height: 513rpx;
+}
+.sestion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.sestion input{
+  width: 488rpx;
+  height: 65rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  border-bottom: 1px solid black;
+
+}
+.sestion button{
+  width: 488rpx;
+  height: 76rpx;
+  background: #30abee;
+  border-radius: 30rpx;
+  color: white;
+  text-align: center;
+  line-height: 76rpx;
+  margin-top: 50rpx;
+}
+.username{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+}
+.username image{
+  width:33rpx;
+  height:37rpx;
+  padding-top:12rpx;
+
+
+}
+.userpwd {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  margin-top:44rpx;
+}
+.userpwd image{
+  width:33rpx;
+  height:37rpx;
+  padding-top:12rpx;
+  
+}
+.foot{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 135rpx;
+
+}
+.foot text{
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  
+}
+.foot text:first-child{
+  padding-right: 20rpx;
+  border-right: 1px solid black;
+
+}
+.thirdLogies{
+  margin-top: 50rpx;
+}
+.thirdLogies image{
+  width: 71rpx;
+  height: 73rpx;
+  margin-left: 20rpx;
+}

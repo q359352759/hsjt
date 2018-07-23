@@ -1,0 +1,123 @@
+<block wx:for="{{[userdata]}}" wx:key="{{item.id}}" >
+<view class="container">
+        <view class="userinfo">
+          <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击获取修改密码 </button> -->
+          <block >
+              <view class="user">
+                  <view class="userPic" bindtap="bindViewTap">
+                    <!-- <image wx:if="{{imgUrl!=null}}" class="userinfo-avatar" src="{{imgUrl}}" background-size="cover"></image> -->
+                    <image class="userinfo-avatar" src="{{item.photo}}" background-size="cover"></image>
+                  </view> 
+                    <view class="userNames">
+                            <text class="userinfo-nickname">{{item.nick}}</text>
+                            <image src="../../images/erweima.png" class="pic"></image>
+                    </view>  
+              </view> 
+          </block>
+        </view>
+      </view>
+    </block>
+      <block wx:for="{{[userAssets]}}" wx:key="{{item.id}}" >
+        <view class="hender_yewu">
+            <view class="num1">
+                <text>{{item.redbalance}}元</text>
+                <text>余额</text>
+            </view>
+            <view class="num1">
+                    <text>{{item.hbbalance}}元</text>
+                    <text>HB</text>
+                </view>
+                <view class="num1">
+                        <text>{{item.balance}}元</text>
+                        <text>分润</text>
+                </view>
+                <view class="num1">
+                        <text>{{item.dbbalance}}元</text>
+                        <text>现金卷</text>
+                </view>
+        </view>
+       </block>
+      <view class="spacing"></view>
+      <view class="order">
+          <text>我的订单</text>
+          <text bindtap="ordermore">查看更多订单></text>
+      </view>
+      <view class="mine_fukuan hender_yewu">
+          <view class="number1 num1 " bindtap="pendingPayment">
+              <image src="../../images/daifukuan.png"></image>
+              <text style="color:black">待付款</text>
+          </view>
+          <view class="num1 number1" bindtap="pendingDelivery">
+                <image src="../../images/daifahuo.png"></image>
+                <text  style="color:black">待发货</text>
+            </view>
+            <view class="num1 number1" bindtap="pendingGoods">
+                    <image src="../../images/daishouhuo.png"></image>
+                    <text style="color:black">待收货</text>
+            </view>
+            <view class="num1 number1" bindtap="pendingEvaluated">
+                        <image src="../../images/daipingjia.png"></image>
+                        <text style="color:black">待评价</text>
+             </view>
+      </view>
+      <view class="spacing"></view>
+      <view class="list">
+          <view class="order group" bindtap="putForward">
+                <view class="group_num">           
+                    <image src="../../images/tixian.png"></image>
+                    <text style="font-size:32rpx;color:black;padding-left:20rpx">提现</text>      
+                </view>
+                <view class="more">
+                    <image src="../../images/qian.png"></image>
+                </view>
+          </view>
+            <view class="order group" bindtap="shouConllection">
+                    <view class="group_num">       
+                        <image src="../../images/xingshou.png"></image>
+                        <text style="font-size:32rpx;color:black;padding-left:20rpx">收藏</text>     
+                    </view>
+                    <view class="more">
+                        <image src="../../images/qian.png"></image>
+                    </view>
+            </view>
+            <view class="order group" bindtap="shoppingCart">
+                        <view class="group_num">
+                              <image src="../../images/gouwuche.png"></image>
+                            <text style="font-size:32rpx;color:black;padding-left:20rpx">购物车</text>
+                        </view>
+                        <view class="more">
+                            <image src="../../images/qian.png"></image>
+                        </view>
+            </view>
+            <view class="order group" bindtap="shoppingManagement">
+                <view class="group_num">
+                        <image src="../../images/shangpuguanli.png"></image>
+                    <text style="font-size:32rpx;color:black;padding-left:20rpx">商铺管理</text>
+                </view>
+                <view class="more">
+                    <image src="../../images/qian.png"></image>
+                </view>
+            </view>
+            <view class="order group" bindtap="businessManagement">
+                    <view class="group_num">
+                          <image src="../../images/yewuguanli.png"></image>
+                        <text style="font-size:32rpx;color:black;padding-left:20rpx">业务管理</text>
+                    </view>
+                    <view class="more">
+                        <image src="../../images/qian.png"></image>
+                    </view>
+                </view>
+                <view class="order group" bindtap="businesslogin">
+                        <view class="group_num">
+                              <image src="../../images/yewuguanli.png"></image>
+                            <text style="font-size:32rpx;color:black;padding-left:20rpx">登录</text>
+                        </view>
+                        <view class="more">
+                            <image src="../../images/qian.png"></image>
+                        </view>
+                    </view>
+
+      </view>
+
+
+      

@@ -1,0 +1,127 @@
+<!--pages/shoppingmall/shoppingmall.wxml-->
+<!-- <text>pages/shoppingmall/shoppingmall.wxml</text> -->
+<!-- <scroll-view  scroll-y > -->
+        <scroll-view scroll-y="true" style="height:1314rpx"   bindscrolltolower="lower"> 
+<view class="shoppheader">
+    <view class="sh_l">
+        <image src="../../images/shopping/12.png"></image>
+    </view>
+    <view class="section">
+        <view class="search">
+                <image src="../../images/shopping/14.png"></image>
+        </view>
+
+            <input placeholder="小花家的牛肉干" placeholder-style="color:white;" />
+     </view>
+        <view class="sh_l">
+                <image src="../../images/shopping/13.png"></image>
+        </view>
+</view>
+<view class="banner">
+     <!-- 轮播 -->
+     <view style="width:100%;height:160rpx">
+            <swiper circular indicator-dots indicator-color="white" indicator-active-color="red" autoplay interval="2000">
+                <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+                    <swiper-item>
+                        <image src="{{item}}" style="width:750rpx;height:300rpx"></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+</view>
+
+<view class="icones">
+    <view class="home_icon">
+                    <view class="home_shoping">
+                        <image src="../../images/shopping/1.png" class="home_pic"></image>
+                        <text class="home_pic_text"> 美食</text>
+                    </view>
+                    <view class="home_shoping">
+                        <image src="../../images/shopping/2.png" class="home_pic"></image>
+                        <text class="home_pic_text"> 休闲娱乐</text>
+                    </view>
+                    <view class="home_shoping">
+                        <image src="../../images/shopping/3.png" class="home_pic"></image>
+                        <text class="home_pic_text"> 酒店</text>
+                    </view>
+                    <view class="home_shoping">
+                        <image src="../../images/shopping/4.png" class="home_pic"></image>
+                        <text class="home_pic_text"> 旅游</text>
+                    </view> 
+                    <view class="home_shoping">
+                            <image src="../../images/shopping/5.png" class="home_pic"></image>
+                            <text class="home_pic_text"> 丽人</text>
+                        </view> 
+    </view>
+    <view class="home_icon">
+            <view class="home_shoping">
+                <image src="../../images/shopping/6.png" class="home_pic"></image>
+                <text class="home_pic_text"> 汽车</text>
+            </view>
+            <view class="home_shoping">
+                <image src="../../images/shopping/7.png" class="home_pic"></image>
+                <text class="home_pic_text"> 教育</text>
+            </view>
+            <view class="home_shoping">
+                <image src="../../images/shopping/8.png" class="home_pic"></image>
+                <text class="home_pic_text"> 保健</text>
+            </view>
+            <view class="home_shoping">
+                <image src="../../images/shopping/9.png" class="home_pic"></image>
+                <text class="home_pic_text"> 宠物</text>
+            </view> 
+            <view class="home_shoping">
+                    <image src="../../images/shopping/10.png" class="home_pic"></image>
+                    <text class="home_pic_text" bindtap="moreshop" > 更多</text>
+                </view> 
+   </view>
+</view>
+
+<view class="banner2">
+        <image src="../../images/shopping/hongbao.jpg"></image>
+</view>
+  
+<view class="home_center" >
+        <block > 
+                <view class="shoping_list" >
+                        <view class="shoping_title">
+                            <view class="shopping_list_text">
+                                    <image src="../../images/shopping/11.png" style="width:25px;height:28px;margin-right:10rpx;"></image>
+                                    <text class="shopping_list_text">热门商铺</text>
+                            </view>
+                          <text class="shopping_list_text_more" bindtap="moreshop">更多></text>
+                        </view>
+                         <view style="display: flex;">
+                                <scroll-view scroll-x="true" style="padding-left:20rpx;margin-top:30rpx;">
+                                        <view style="display: flex;"  >
+                                        <block wx:for="{{[hotShopingStore]}}" wx:key="{{item.id}}">
+                                                <shoppingItem wx:for="{{item.rows}}" wx:key="{{item.id}}"   item="{{item}}" bindhandeClick="handeClick"></shoppingItem>
+                                            </block>
+                                        </view>
+                                </scroll-view>
+                        </view>
+                    </view>
+        </block>
+        <!-- <scroll-view scroll-y="true" style="height:900px"  lower-threshold="200"  bindscrolltolower="lower"> 触犯不了 -->
+       
+                    <block > 
+                            <view class="shoping_list" >
+                                    <view class="shoping_title">
+                                        <view class="shopping_list_text">
+        
+                                                <image src="../../images/shopping/11.png" style="width:25px;height:28px;margin-right:10rpx;"></image>
+                                                <text class="shopping_list_text">热门商品</text>
+                                        </view>
+                                    <text class="shopping_list_text_more" bindtap="moregoods">更多></text>
+                                    </view>
+                                    <view class="goods">
+                                        <block wx:for="{{[hotShoppingGoods]}}" wx:key="{{item.id}}"  >
+                                            <shoppingItemGoods  wx:for="{{item.rows}}" wx:key="{{item.id}}" item="{{item}}"  binddetailGoods="detailGoods"   ></shoppingItemGoods> 
+                                        </block>                          
+                                    </view>
+                                </view>
+                    </block>        
+        <!-- </scroll-view>         -->
+    </view>
+</scroll-view>

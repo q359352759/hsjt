@@ -1,0 +1,20 @@
+<!--components/listItems/listItems.wxml-->
+<!-- <text>components/listItems/listItems.wxml</text> -->
+
+<view>
+     <ul class="types_item">
+        <li>
+            <view >{{item.remark}}</view>
+        </li>
+        <li>
+            <view>  {{item.amount}}元</view>
+          </li>
+        <li> 
+            <view>{{item.createtime}}</view>
+                
+        </li>
+
+    </ul>
+</view>
+<view class="spacing"></view>
+

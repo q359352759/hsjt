@@ -1,0 +1,160 @@
+<block wx:for="{{[hbindex]}}" wx:key="{{item}}" wx:for-item="hbindex">
+<view class="porfit">
+    <view class="profit_top">  
+        <view class="fenrui fen_le">
+            <text class="profit_text">正在分润排号</text>
+            <view class="paihaotext" >
+                    <view  wx:for="{{fhnum}}" wx:key="{{index}}" wx:for-item="fhnum">{{fhnum}}</view>
+                   
+
+            </view>
+            
+        </view>  
+        <view class="fenrui">
+                <text  class="profit_text" >总分润排号</text>
+                <view class="paihaotext"  >
+                        <view wx:for="{{serversnumber}}" wx:key="{{serversnumber}}" wx:for-item="serversnumber">{{serversnumber}}</view>
+                </view>
+                
+        </view> 
+    </view>
+    <text  class="profit_text texts">有{{ShowNum}}人参与分润</text>
+</view>
+
+<view class="myporfit">
+        <view class="Arrow_1">
+            <image src="../../images/hou_02.png"></image>
+            <image src="../../images/hou_02.png"></image>
+            <image src="../../images/hou_02.png"></image>
+    </view>
+    <view class="myporfit_l">
+        <view class="myporfit_l_text myprofit_t">
+            <swiper  autoplay="true"  interval="5000" duration="500" circular="true" vertical="true">
+            <block wx:for="{{userLast}}" wx:key="{{item}}" >
+                <swiper-item    >
+                  <text>{{item}}</text>
+                </swiper-item>
+            </block>
+            </swiper>
+            
+        </view>
+
+        <text class="myporfit_l_text">我的分润号</text>    
+    </view>
+    <view class="timer">
+        <view class="circle"></view>
+    </view>
+     <view class="myporfit_l">
+        <text class="myporfit_l_text">距离下次分润</text>
+        <text class="myporfit_l_text">还有{{paihao}}个排号</text>
+    </view>
+</view>
+
+<view class="classporfit">
+    <view class="fenrui_content">
+         <text class="classporfit_text">分润号</text>
+         <text>{{phs}}个</text>
+         <text>{{ph}}次</text>
+    </view>
+    <view class="fenrui_content contents">
+            <text class="classporfit_text">分润号</text>
+            <text>{{fh}}</text>
+            <text>{{hb}}</text>
+       </view>
+       <view class="fenrui_content">
+            <text class="classporfit_text">分润号</text>
+            <text>{{dfh}}个</text>
+            <text>{{dfhMoney}}元</text>
+       </view>
+</view>
+</block>
+<view class="spacing"></view>
+<view class="fenrui_record">
+    <text>分润号兑换记录</text>
+    <text>利润分配协议</text>
+</view>
+<view class="time_class">
+    <ul>
+        <li data-index="0" class="{{select2 == 0 ? 'current2' : ''}}" bindtap="all" >全部</li>
+        <li data-index="1" class="{{select2 == 1 ? 'current2' : ''}}" bindtap="january">一月</li>
+        <li data-index="2" class="{{select2 == 2 ? 'current2' : ''}}" bindtap="quarter">季度</li>
+        <li data-index="3" class="{{select2 == 3 ? 'current2' : ''}}" bindtap="year">一年</li>
+    </ul>
+ 
+</view>
+<view wx:if="{{select2==0}}" >
+    
+    <view wx:if="{{xflistAll.length==0}}" class="january_text"  >
+                <text>--暂无数据--</text>
+    </view>
+    <view wx:else  class="all" >
+            <block  wx:for="{{xflistAll}}" wx:key="{{xflistAll}}" wx:for-item="xflistitem">
+                    <view class="header_time">
+                        <text>{{xflistitem.exchangeDate}}</text>
+                    </view>
+                    <view class="record">
+                        <view class="fenrui_conetet" >
+                            <text wx:for="{{xflistitem.disNum}}" wx:key="{{disNums}}" wx:for-item="disNums" wx:for-index="index">{{disNums.DistributionNum}}</text>
+                        </view>
+                    </view>
+            </block>
+
+
+    </view>
+</view>
+<view wx:if="{{select2==1}}"  >
+    <view wx:if="{{januaryData.length==0}}" class="january_text"  >
+                <text>--暂无数据--</text>
+    </view>
+    <view  wx:else  class="all" >
+            <block wx:for="{{januaryData}}" wx:key="{{januaryData}}" wx:for-item="januaryData">
+                <view class="header_time">
+                        <text>{{januaryData.exchangeDate}}</text>
+                </view>       
+                <view class="record">
+                    <view class="fenrui_conetet" >
+                        <text wx:for="{{januaryData.disNum}}" wx:key="{{januarydisNums}}" wx:for-item="januarydisNums" >{{januarydisNums.DistributionNum}}</text>
+                    </view>
+                </view>
+              </block>
+    </view>
+</view>
+<view wx:if="{{select2==2}}" >
+    <view wx:if="{{quarterData.length==0}}" class="january_text"  >
+                <text>--暂无数据--</text>
+    </view>
+    <view wx:else  class="all" >
+            <block  wx:for="{{quarterData}}" wx:key="{{quarterData}}" wx:for-item="quarterData">
+                    <view class="header_time">
+                        <text>{{quarterData.exchangeDate}}</text>
+                    </view>
+                    <view class="record">
+                        <view class="fenrui_conetet" >
+                            <text wx:for="{{quarterData.disNum}}" wx:key="{{quarter}}" wx:for-item="quarter" >{{quarter.DistributionNum}}</text>
+                        </view>
+                    </view>
+            </block>
+
+
+    </view>
+</view>
+<view wx:if="{{select2==3}}" >
+
+    <view wx:if="{{yearData.length==0}}" class="january_text"  >
+                <text>--暂无数据--</text>
+    </view>
+    <view wx:else  class="all" >
+            <block  wx:for="{{yearData}}" wx:key="{{yearData}}" wx:for-item="yearData">
+                    <view class="header_time">
+                        <text>{{yearData.exchangeDate}}</text>
+                    </view>
+                    <view class="record">
+                        <view class="fenrui_conetet" >
+                            <text wx:for="{{yearData.disNum}}" wx:key="{{year}}" wx:for-item="year" >{{year.DistributionNum}}</text>
+                        </view>
+                    </view>
+            </block>
+
+
+    </view>
+</view>

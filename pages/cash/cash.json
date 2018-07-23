@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "listItmes": "../../components/listItems/listItems",
+        "moneyItems": "../../components/moneyItems/moneyItems"  
+      },
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#00a2e9",
+      "navigationBarTitleText": "现金卷",
+      "navigationBarTextStyle": "white"
+
+}

@@ -1,0 +1,35 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+<view>
+  <view class="logines">
+    <image src="../../images/login/01.jpg"></image>
+
+    <view class="sestion">
+
+      <view class="username">
+          <image src="../../images/login/a.png"></image>
+          <input placeholder="账户/手机号" bindblur="bindinputname" maxlength="11" value="{{userName}}" auto-focus/>
+      </view>
+      <view class="userpwd">
+
+          <image src="../../images/login/a.png"></image>
+          <input placeholder="密码" type="text" bindblur="bindinputpassword" value="{{userPassword}}" auto-focus/>
+
+      </view>
+        <button type="button" bindtap="logines">登陆</button>
+    </view>
+    <view class="foot">
+      <text  bindtap="handelClickClerpwd">忘记密码？</text>
+      <text bindtap="handelClickReg">现在注册 ></text>
+    </view>
+    <!-- <view class="thirdLogies foot">
+        <image src="../../images/login/03.jpg"></image>
+    </view> -->
+  </view>
+
+
+</view>

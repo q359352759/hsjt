@@ -1,0 +1,164 @@
+
+.red_top{
+    width:750rpx;
+    height:80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30rpx;
+}
+.redMoney{
+    font-size: 36rpx;
+}
+swiper-item {
+    background: #f2f2f2;
+
+}
+
+.ti{
+    padding-left: 46rpx;
+    display: flex;
+    flex-direction: row;
+    background: white;
+    height: 100rpx;
+    line-height: 100rpx;
+
+}
+.ti input{
+    width: 286rpx;
+    height: 100rpx;
+}
+.zhifubao{
+    margin-top: 20rpx;
+}
+.btn{
+    vertical-align: middle;
+    border-radius: 10rpx;
+    width:147rpx;
+    height:58rpx;
+    font-size:23rpx;
+    background-color: #00a5ea;
+    color: #fff;
+    margin-top: 27rpx;
+}
+.forgetpass{
+    font-size: 26rpx;
+    color: #00a2e9;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 20rpx;
+
+}
+.prompt_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.prompt{
+    color: #9c9c9c;
+    font-size: 28rpx;
+    padding-top: 10rpx;
+    margin-left: 46rpx;
+}
+.radio-group{
+    margin-top: 20rpx;
+    margin-left: 46rpx;
+}
+.severs{
+    color: #00a2e9;
+    font-size: 28rpx;
+
+}
+.smit{
+    width: 700rpx;
+    margin: 0 auto;
+    background: #de3121;
+    height:78rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+}
+
+
+
+
+/* 菜单切换 */
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 19.3%;  
+    color: #777777;  
+}  
+.on{ color: #badffc;  
+    border-bottom: 5rpx solid #00a2e9;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+/* .swiper-box view{  
+    text-align: center;  
+} */
+
+
+
+/* 下拉菜单 */
+.phone_personal{
+    /* width: 100%; */
+    /* color:rgb(34, 154, 181); */
+
+    color: black;
+    height:100rpx;
+    line-height:100rpx;
+    text-align: center;
+}
+.phone_one{
+    display: flex; 
+    position: relative;
+    justify-content: space-between;
+    /* background: white; */
+    /* background-color:rgb(239, 239, 239); */
+    /* width:90%; */
+    height:100rpx;
+    margin:0 auto;
+    border-radius: 10rpx;
+    border-bottom:2rpx solid rgb(255, 255, 255);
+}
+.person_box{
+    position: relative;
+
+}
+.phone_select{
+    margin-top:0;
+    z-index: 100;
+    /* border: 1px solid black; */
+    position: absolute; 
+}
+.select_one{
+    text-align: center;
+    background: white;
+    /* background-color:rgb(239, 239, 239); */
+    width:676rpx;   
+    height:100rpx;
+    line-height:100rpx;
+    margin:0 5%;
+    border-bottom:2rpx solid rgb(255, 255, 255);
+}
+.personal_image{
+    z-index: 100;
+    position: absolute;
+    right:2.5%;
+    width: 34rpx;
+    height: 20rpx;
+    margin:40rpx 20rpx 40rpx 0;
+    transition: All 0.4s ease;  
+    -webkit-transition: All 0.4s ease;
+}
+.rotateRight{
+    transform: rotate(180deg); 
+}
+.spacing{
+    height: 20rpx;
+    background: #f2f2f2;
+}

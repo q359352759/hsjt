@@ -1,0 +1,54 @@
+/* components/moneyItems/moneyItems.wxss */
+/* .door{
+    width: 750rpx;
+    height: 200rpx;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.doorstors{ 
+    width:702rpx;
+    height: 150rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50rpx;
+    padding-right: 50rpx;
+    background: #fafafa;
+
+}
+.door_l{
+    display: flex;
+    flex-direction: column;
+}
+.door_text{
+    font-size: 20rpx;
+    padding-top: 20rpx;
+
+} */
+.types_item{
+    width: 750rpx;
+    height: 80rpx;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+li>view{
+ font-size: 25rpx;
+ color: black;
+ text-align: center;
+ width: 247rpx;
+ height: 60rpx;
+}
+
+li:not(:last-child)>view{ 
+    border-right: 1px solid black;   
+} 
+
+.spacing{
+    height: 20rpx;
+    background: #f2f2f2;
+}

@@ -1,0 +1,11 @@
+<view class="shoping_item_c" catchtap="onTapItem">
+        <image src="{{item.mainlogo}}" class="shopping_item_pic"></image>
+            <view class="shopping_item_text">
+                <!-- <text class="item_text_tiltl" >风来客娇娇</text> -->
+                <!-- <text class="item_text_detail">fsfsffffffffffffffffffffffffffffffffffffsdfffffffffffffffffffffffffffff</text> -->
+                <view class="item_money">
+                    <text class="newPrice">{{item.shopname}}</text>
+                    <!-- <text class="oldPrice" >{{item.petName}}</text> -->
+                </view> 
+            </view>
+    </view> 

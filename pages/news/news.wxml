@@ -1,0 +1,192 @@
+
+<view>
+        <view class="swiper-tab"> 
+                <view  class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav" >
+                        <image src="../../images/news/nav/personal_03.jpg" data-current="0" ></image>
+                        <view></view>
+                        <text style="font-size:30rpx;color:#7e7e80;" data-current="0">快递</text>
+               </view>
+               <view  class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" >
+                    <image src="../../images/news/nav/personal_05.jpg" data-current="1"></image>
+                    <view></view>
+                    <text style="font-size:30rpx;color:#7e7e80;" data-current="1">通知</text>
+           </view>
+           <view  class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav" >
+                <image src="../../images/news/nav/personal_07.jpg" data-current="2"></image>
+                <view></view>
+                <text style="font-size:30rpx;color:#7e7e80;" data-current="2">消息</text>
+          </view>
+        </view>
+
+        <view class="spacing"></view>
+
+        <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px"  bindchange="bindChange"> 
+                <swiper-item> 
+                    <view class="mian">
+                        <view class="main_center">
+                            <view class="main_center_l">
+                                <view class="pic">
+                                        <image src="../../images/news/nav/personal_13.jpg"></image>
+                                </view>  
+                                    <view class="textes">
+                                        <text>多德士运动专营店</text>
+                                        <text>[亲，请你核对订单信息]</text>
+                                    </view>
+                            </view>    
+                           <view class="time">
+                               <text>昨天</text>
+                           </view>
+                        </view> 
+                        <view class="main_center">
+                                <view class="main_center_l">
+                                    <view class="pic">
+                                            <image src="../../images/news/nav/personal_16.jpg"></image>
+                                    </view>  
+                                        <view class="textes">
+                                            <text>多德士运动专营店</text>
+                                            <text>[亲，请你核对订单信息]</text>
+                                        </view>
+                                </view>    
+                               <view class="time">
+                                   <text>昨天</text>
+                               </view>
+                            </view>   
+                            <view class="main_center">
+                                    <view class="main_center_l">
+                                        <view class="pic">
+                                                <image src="../../images/news/nav/personal_18.jpg"></image>
+                                        </view>  
+                                            <view class="textes">
+                                                <text>多德士运动专营店</text>
+                                                <text>[亲，请你核对订单信息]</text>
+                                            </view>
+                                    </view>    
+                                   <view class="time">
+                                       <text>昨天</text>
+                                   </view>
+                                </view>   
+                                <view class="main_center">
+                                        <view class="main_center_l">
+                                            <view class="pic">
+                                                    <image src="../../images/news/nav/personal_20.jpg"></image>
+                                            </view>  
+                                                <view class="textes">
+                                                    <text>多德士运动专营店</text>
+                                                    <text>[亲，请你核对订单信息]</text>
+                                                </view>
+                                        </view>    
+                                       <view class="time">
+                                           <text>昨天</text>
+                                       </view>
+                                    </view>   
+                                    <view class="main_center">
+                                            <view class="main_center_l">
+                                                <view class="pic">
+                                                        <image src="../../images/news/nav/personal_22.jpg"></image>
+                                                </view>  
+                                                    <view class="textes">
+                                                        <text>多德士运动专营店</text>
+                                                        <text>[亲，请你核对订单信息]</text>
+                                                    </view>
+                                            </view>    
+                                           <view class="time">
+                                               <text>昨天</text>
+                                           </view>
+                                        </view>   
+                                        <view class="main_center">
+                                                <view class="main_center_l">
+                                                    <view class="pic">
+                                                            <image src="../../images/news/nav/personal_24.jpg"></image>
+                                                    </view>  
+                                                        <view class="textes">
+                                                            <text>多德士运动专营店</text>
+                                                            <text>[亲，请你核对订单信息]</text>
+                                                        </view>
+                                                </view>    
+                                               <view class="time">
+                                                   <text>昨天</text>
+                                               </view>
+                                            </view>                
+                    </view>
+                      
+                </swiper-item> 
+                 <!-- 通知 -->
+                  <swiper-item style=" background: #e5e3e3;">
+                      <!-- <view class="noteice_mian"> -->
+                            <view class="notice_content">
+
+                                    <view class="notice_left">
+                                        <text>订单已签收</text>     
+                                        <text>多功能仰卧板仰卧起坐健身器材家用多功能运动辅助器锻炼腹肌板</text>
+                                        <text>运单编号  88924704894847</text>
+         
+                                    </view>
+         
+                                    <view class="notice_right">
+                                         <text>17/01/24</text>
+                                         <image src="../../images/news/nav/wuliu_03.jpg"></image>
+                                     </view>
+         
+                                </view>
+                                <view class="notice_content">
+                                        <view class="notice_left">
+                                            <text>订单已签收</text>     
+                                            <text>多功能仰卧板仰卧起坐健身器材家用多功能运动辅助器锻炼腹肌板</text>
+                                            <text>运单编号  88924704894847</text>
+             
+                                        </view>
+             
+                                        <view class="notice_right">
+                                             <text>17/01/24</text>
+                                             <image src="../../images/news/nav/wuliu_06.jpg"></image>
+                                         </view>
+                                    </view>
+                                    <view class="notice_content">
+                                            <view class="notice_left">
+                                                <text>订单已签收</text>     
+                                                <text>多功能仰卧板仰卧起坐健身器材家用多功能运动辅助器锻炼腹肌板</text>
+                                                <text>运单编号  88924704894847</text>
+                 
+                                            </view>
+                 
+                                            <view class="notice_right">
+                                                 <text>17/01/24</text>
+                                                 <image src="../../images/news/nav/wuliu_08.jpg"></image>
+                                             </view>
+                                        </view>
+    
+
+                      <!-- </view> -->
+                      
+
+
+                  </swiper-item>
+                   <!-- 消息 -->
+                  <swiper-item style=" background: #e5e3e3;">
+                      <view class="liaotian_main">
+                          <view class="liaotian_l">
+                              <image src="../../images/news/nav/personal_24.jpg"></image>
+                              <text>电动磨豆机，原价199，优惠价格99元包邮    电动磨豆机，原价199，优惠价格99元包邮   电动磨豆机，原价199，优惠价格99元包邮   电动磨豆机，原价199，优惠价格99元包邮  </text>
+                          </view>
+                          <view class="liaotian_l">
+                                <image src="../../images/news/nav/personal_24.jpg"></image>
+                                <text>电动磨豆机，原价199，优惠价格99元包邮    电动磨豆机，原价199，优惠价格99元包邮   电动磨豆机，原价199，优惠价格99元包邮   电动磨豆机，原价199，优惠价格99元包邮  </text>
+                            </view>
+                          <view class="liaotian_r">
+                                <image src="../../images/news/nav/personal_24.jpg"></image>
+                                <text>我在看一看呢</text>
+                            </view>
+
+                            <view class="userinput">
+                                <input type="text" confirm-type="send" />
+                                <button type="button" open-type="contact" bindtap="send">发 送</button>
+                            </view>
+
+                      </view>
+
+                  </swiper-item>
+             
+            </swiper> 
+
+
+</view>

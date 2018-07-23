@@ -1,0 +1,79 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 62rpx;
+    margin: 20rpx;
+    padding-bottom: 20rpx;
+    /* padding-left: 20rpx;
+    padding-right: 20rpx; */
+    border-bottom: 1px solid #eae8e8;
+}
+.home_shoping{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home_pic{
+    width: 71rpx;
+    height: 68rpx;
+}
+.home_pic_text{
+    text-align: center;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+    /* float: left; */
+}
+.class_menu{
+    height: 90rpx;  
+    border-bottom: 1px solid #dadada;
+}
+/*总菜单容器*/
+.menu {
+    /* display: block; */
+    height: 38rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+/*一级菜单*/
+.menu dt {
+   font-size: 30rpx;float:left;width: 23%;height: 38rpx;
+   text-align: center;color: black;line-height: 38rpx;
+}
+/*二级菜单外部容器样式*/
+.menu dd{ position: absolute;width: 100%;top:94px; left:0;z-index:999;}
+/*二级菜单普通样式*/
+.menu li{
+   font-size: 32rpx; line-height: 57rpx;color: black;height: 57rpx;display: block;padding-left: 8rpx;
+   background-color: #fff;border-bottom: 1px solid #dbdbdb;
+}
+/* 显示与隐藏 */
+.show {
+    display: block;
+ }
+ .hidden {
+  display: none;
+ }
+ /*二级菜单高亮样式*/
+.menu li.subMenuHighLight{
+   background-color: #f4f4f4;
+}
+/* .subMenuHighLight{
+    color: green;
+} */
+.menu li.highlight{
+    background-color: #f4f4f4;
+ }
+ .menu dt i{
+     display: inline-block;
+     width: 0rpx;
+     height: 0rpx;
+     margin-left:15rpx;
+     border-top: 4px solid #5a5a5a;
+     border-left: 4px solid transparent;
+     border-right: 4px solid transparent;
+ }
+ 

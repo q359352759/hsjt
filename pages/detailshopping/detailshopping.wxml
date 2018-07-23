@@ -1,0 +1,234 @@
+
+
+<import src="../../wxParse/wxParse.wxml"/>
+<block wx:for="{{[detail.productRows]}}" wx:for-item="item" wx:key="item">
+<view class="header" bindtap='hideModal'>
+    <view style="width:100%;height:160rpx">
+        <swiper circular indicator-dots indicator-color="white" indicator-active-color="red" autoplay interval="2000">
+            <block wx:for="{{item.imagepath}}" wx:key="{{item}}">
+                <swiper-item>
+                  <view class="imagepath">
+                    <image src="{{item}}" style="width:400rpx;height:300rpx"></image>
+                  </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>
+
+<view class="header_text">
+  <text class="title">{{item.productname}}</text>
+  <view class="header_HB">
+      <view class="Hb styles">
+          <text>￥{{item.minsaleprice}}</text>
+          <text>赠12HB</text>
+      </view>
+     <text class="yuexiao">月销{{item.salecounts!=null ? query.salecounts : 0}}笔</text>
+  </view>
+  <view class="header_b header_HB">
+    <text>包邮</text>
+    <text>官方直营</text>
+  </view>
+</view>
+<view class="spacing"></view>
+
+<view class="color header_HB">
+  <text bindtap='chooseSezi'>颜色/规格</text>
+  <text>></text>
+</view>
+   <!--隐藏区域！！！规格  -->
+   <block wx:for="{{findskus.findskusRows}}" wx:key="item" wx:for-item="findskus">
+      <block wx:for="{{findskus.sizeList}}" wx:key="sizeList" wx:for-item="sizeList">
+        <block wx:for="{{sizeList.versionList}}" wx:key="versionList" wx:for-item="versionList">
+   <view class='choose' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+        <view class="choose_header style_row style_bottom">
+              <view class="choose_pic" >
+                  <image src="{{versionList.showpic}}" ></image>
+              </view>
+              <view class="close" bindtap="hideModal">
+                <text>X</text>
+              </view>
+              <view class="choose_text style_column">
+                <text>￥{{versionList.saleprice}}</text>
+                <text>库存:{{versionList.stock}}</text>
+                <text>已选择:{{findskus.color.color}}{{sizeList.size.size}}</text>
+              </view>
+        </view>
+        <view class="choose_content">
+            <view class="choose_color style_bottom">
+              <text>颜色</text>
+              <view class="number_hao ">
+                  <!-- <block wx:for="{{array}}" wx:key="item"> -->
+                      <view class="chose-txt" data-id="{{index}}"  data-text="{{item.type}}" bindtap="choseTxtColor" style="{{index == id?' background: red;;color:white':'color:gray'}}">
+                          <text class="chose-p" >{{findskus.color.color}}</text>
+                      </view>
+                      <!-- </block> -->
+              </view>
+
+            </view>
+            <view class="choose_chicun style_bottom">
+              <text>尺寸</text>
+              <view class="type">
+                  <!-- <block wx:for="{{arraynumber}}" wx:key="item"> -->
+                      <view class="chose-txt"  data-id="{{index}}"  data-text="{{item.name}}" bindtap="choseTxtNumber" style="{{index == numId?' background: red;;color:white':'color:gray'}}">
+                          <text class="chose-p" >{{sizeList.size.size}}</text>
+                      </view>
+                      <!-- </block> -->
+              </view>
+            </view>
+            <view class="choose_price style_bottom">
+              <text>价格</text>
+              <view class="type">
+                <!-- <block wx:for="{{arrayprice}}" wx:key="item"> -->
+                    <view class="chose-txt"  data-id="{{index}}"  data-text="{{item.price}}" bindtap="choseTxtPrice" style="{{index == priceId?' background: red;color:white':'color:gray'}}">
+                        <text class="chose-p" >{{versionList.saleprice}}</text>
+                    </view>
+                    <!-- </block> -->
+              </view>
+            </view>
+            <view class="choose_conter style_bottom">
+                <text>数量</text>
+                <view class="type style_row">
+                    <input class='count' type='number' value='{{count}}'></input>
+                    <view class="conter style_column">
+                        <image src="../../images/down.png" bindtap="conterpAdd"></image>
+                        <image src="../../images/ap.png" bindtap="conterReduce"></image>
+                    </view>
+                </view>
+              </view>
+
+        </view>
+        <view class="shoppingcar style_row">
+          <text>加入购物车</text>
+          <text>立即购买</text>
+        </view>
+   </view>
+       </block>
+    </block>
+  </block>
+    <!--隐藏区域  -->
+
+<view class="spacing"></view>
+<!-- 宝贝评价 -->
+<block wx:for="{{[babyeValuation]}}" wx:for-item="x" wx:key="{{x.item}}">
+  <view class="body_darlin"  wx:for="{{[x.bodyRows]}}"   wx:key="{i.item}}" wx:for-item="i" >
+      <view class="body_title header_HB">
+        <text>宝贝评价({{i.length}})</text>
+        <text>更多评价></text>
+      </view>
+      <view wx:if="{{i.length>=2}}">
+          <view class="body_content header_HB">
+              <view class="content_left">
+                <view class="userpic">
+                    <image src="../../images/personal_22.jpg" ></image>
+                </view>
+                <view class="user_text style">
+                    <text>**</text>
+                    <text>{{i[0].membername}}</text>
+                    <image  wx:for="{{i[0].evaluationphoto}}"   wx:key="{pic.item}}" wx:for-item="pic"  src="{{pic[0]}}" ></image>  
+                </view>  
+              </view>
+              <view class="content_left">
+                <text class="time">{{i[0].evaluationtime}}</text>
+              </view>
+          </view>
+          <view class="body_content header_HB">
+                <view class="content_left">
+                  <view class="userpic">
+                      <image src="../../images/personal_22.jpg" ></image>
+                  </view>
+                  <view class="user_text style">
+                      <text>**</text>
+                      <text>{{i[1].membername}}</text>
+                      <image  wx:for="{{i[1].evaluationphoto}}"   wx:key="{pic.item}}" wx:for-item="pic"  src="{{pic[0]}}" ></image>  
+                  </view>  
+                </view>
+                <view class="content_left">
+                  <text class="time">{{i[1].evaluationtime}}</text>
+                </view>
+          </view>
+        </view>
+        <view wx:else></view>  
+  </view>
+
+   
+
+   
+</block>
+<!-- 宝贝评价结束 -->
+<view class="spacing"></view>
+<block  wx:for="{{[detail.shopRows]}}" wx:for-item="shop" wx:key="shop">
+<view class="store">
+  <view class="header_HB">
+      <view class="store_left styles">
+          <image src="{{shop.mainlogo}}" ></image>
+          <view class="store_title style ">
+            <text>{{shop.shopname}}</text>
+            <text>工商认证</text>
+          </view>
+      </view>
+      <view class="allbody">
+        <text>全部宝贝</text>
+        <text>进店逛逛</text>
+      </view>
+  </view> 
+  <view class="store_botom style_between" >
+    <view class="{{shop.creditrating>=4?'type_1':shop.creditrating<4 && shop.creditrating>=3?'type_2':'type_3'}} body_miaoshu style_between" >
+      <text>宝贝描述</text>
+      <text>{{shop.creditrating}}</text>    
+      <text wx:if="{{shop.creditrating>4}}">高</text>
+      <text  wx:if="{{shop.creditrating>=3}}">中</text>
+      <text  wx:if="{{shop.creditrating<3}}">低</text>
+    </view>
+    <view  class="{{shop.creditrating>=4?'type_1':shop.creditrating<4 && shop.creditrating>=3?'type_2':'type_3'}} body_miaoshu style_between">
+        <text>宝贝描述</text>
+        <text>{{shop.creditrating}}</text>
+        <text wx:if="{{shop.creditrating>4}}">高</text>
+        <text  wx:if="{{shop.creditrating>=3}}">中</text>
+        <text  wx:if="{{shop.creditrating<3}}">低</text>
+      </view>
+      <view  class="{{shop.creditrating>=4?'type_1':shop.creditrating<4 && shop.creditrating>=3?'type_2':'type_3'}} body_miaoshu style_between">
+          <text>宝贝描述</text>
+          <text>{{shop.creditrating}}</text>
+          <text wx:if="{{shop.creditrating>4}}">高</text>
+          <text  wx:if="{{shop.creditrating>=3}}">中</text>
+          <text  wx:if="{{shop.creditrating<3}}">低</text>
+        </view>
+  </view>
+</view>
+</block> 
+<view class="spacinges"></view>
+<view>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view class="footer style_between">
+  
+ <view class="num style_num">
+    <image src="../../images/stores.png" ></image>
+    <text>店铺</text>
+   
+ </view>
+ <view class="num style_num" bindtap="handelClickNews">
+    <image src="../../images/tabs/message.jpg" ></image>
+    <text >消息</text>
+    <!-- <button type="button" open-type="contact"  class="btn">消息</button> -->
+    
+ </view>
+ <!-- <view class="userinput num style_num">
+    <button type="button" open-type="contact" bindtap="send">发 送</button>
+</view> -->
+ <view class="num style_num" bindtap="onColletionTap">
+    <image class="save " src="{{isClick?'../../images/dianji.png':'../../images/shoucang.png'}}" ></image>
+   <text class="saveText" >{{isClick?'已收藏':'收藏'}}</text>
+ </view>
+ <view class="shopingcar">
+     <text bindtap='chooseSezi'>加入购物车</text>
+    <text>立即购买</text> 
+ </view>
+ 
+
+
+</view>
+</block>
+

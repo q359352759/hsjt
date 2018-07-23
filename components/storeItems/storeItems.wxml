@@ -1,0 +1,34 @@
+<view class="content">
+        <view class="content_store">
+            <image src="../../images/store.png"></image>     
+        </view>
+        <view class="content_text">
+            <text class="title">花居婚庆</text>
+            <view class="ding">
+                    <image src="../../images/ding.png"></image>
+                    <text class="address">内江市 威远县 广场街南段 </text>
+            </view>
+           
+            <view class="kilometre">
+                    <view class="ding">
+                            <image src="../../images/wei.png"></image>
+                            <text class="address">11362公里</text>
+                    </view>
+               
+                <view class="kilometre yuexiao">
+                    <text class="address">月销：</text>
+                    <text class="bin">0笔</text>
+                </view>
+            </view>
+            <view class="reputation">
+                <text class="address">信誉</text>
+                <image src="../../images/xing.png"></image>
+            </view>
+            
+        </view>
+        <view class="content_pic">    
+                <image src="../../images/01.png"></image>
+                <image src="../../images/02.png"></image>
+            </view>
+    
+    </view>

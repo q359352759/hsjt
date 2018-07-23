@@ -1,0 +1,24 @@
+
+<view class="reg">
+    <view class="username ">
+           <text>姓名: </text>
+            <input style="margin-left:30rpx;" placeholder="请输入姓名"  type="text" placeholder-style="font-size:14px;" bindblur="bindName" value="{{username}}" />
+     </view>
+     <view class=" username userpwd">
+            <text>电话: </text>
+            <input placeholder="请输入电话" type="text" style="margin-left: 30rpx; " maxlength="11" placeholder-style="font-size:14px;" bindblur="bindPhone" value="{{userphone}}" auto-focus/>
+     </view>
+     <view class="username userpwd">
+            <text>地址:</text>
+            <textarea  style="margin-left: 22rpx; "   placeholder="省份 城市 县区" placeholder-style="font-size:14px;"  bindblur="bindAdress"   value="{{add}}" auto-focus></textarea>
+             <text class="adress"style="width:250rpx;" bindtap="handeladress">点击获取地址</text>
+     </view>
+     <view class=" username userpwd">
+        <text>地址: </text>
+        <input placeholder="请详细输入地址" type="text" style="margin-left: 30rpx; " placeholder-style="font-size:14px;" bindblur="bindinputAdress" value="{{useradresses}}" auto-focus/>
+    </view>
+    
+     <view class="regbut">
+           <button type="button" bindtap="handleClickSave">保存</button>
+     </view>
+</view>

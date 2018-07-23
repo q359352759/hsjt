@@ -1,0 +1,81 @@
+/* pages/register/register.wxss */
+.reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left:37rpx;
+    /* align-items: center; */
+    margin-top: 50rpx;
+}
+.regbut button{
+    width: 488rpx;
+    height: 76rpx;
+    background: red;
+    border-radius: 30rpx;
+    color: white;
+    text-align: center;
+    line-height: 76rpx;
+    margin-top: 50rpx;
+  }
+
+.reg input{
+    width: 488rpx;
+    height: 65rpx;
+    /* font-size: 28rpx; */
+    padding-left: 45rpx;
+    margin-left: 20rpx;
+    border-bottom: 1px solid #ccc;
+}
+.username{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 20rpx;
+    position: relative;
+  }
+  .username>text{
+      font-size: 34rpx;
+      width: 81rpx;
+  }
+  .username>textarea{
+      width: 527rpx;
+      height: 180rpx;
+      padding-top: 20rpx;
+      padding-left: 20rpx;
+      border: 1px solid #ccc;
+    
+  }
+
+
+  .adress{
+      height: 50rpx;
+      color:#007aff;
+      color:#007aff;
+      position:absolute;
+      right:69rpx;
+      top:147rpx;
+      z-index: 10;
+     
+
+  }
+  .userpwd {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top:44rpx;
+  }
+  .foot_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 177rpx;
+    padding-right:44rpx;
+  }
+  .foot_text text{
+    font-size: 30rpx;
+  }
+
+

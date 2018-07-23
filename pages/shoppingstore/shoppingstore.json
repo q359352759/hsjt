@@ -1,0 +1,12 @@
+{
+    
+    "usingComponents": {
+        "shopingLists": "../../components/shoppinglist/shoppinglist",
+        "shoppingItemGoods": "../../components/shoppingItemGoods/shoppingItemGoods"
+      },
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0198e9",
+    "navigationBarTitleText": "商城",
+    "navigationBarTextStyle": "#696d69"
+
+}

@@ -1,0 +1,140 @@
+<!-- <scroll-view scroll-y style="height:800rpx" >  -->
+       
+<view class="header">
+    <view class="heade">
+            <view class="header_pic" bindtap="handeClickBalance">
+            <image src="../../images/home/fs_03.png"></image>
+            <text >余额</text>
+        </view>
+        <view class="header_pic"  bindtap="handeLiRuiClick">
+            <image src="../../images/home/fs_05.png"></image>
+            <text >分润</text>
+        </view>
+        <view class="header_pic" bindtap="handeClickOutmoney">
+            <image src="../../images/home/fs_07.png"></image>
+            <text >提现</text>
+        </view>
+    </view>
+    <view class="header_pic_l header_pic" bindtap="handeClickShop">
+        <image src="../../images/home/weixi_02.png" ></image>
+        <text>店铺</text>
+    </view>  
+</view>
+<block wx:for="{{[userTotal]}}" wx:key="{{item}}">
+<view class="header_out">
+    <view class="headers">
+        <rich-text>
+            <view class="swiper-tab"> 
+                    <view  class="swiper-tab-list {{currentTab==0 ? 'on' : ''}} " data-current="0" bindtap="swichNav" >
+                        <view class="style_clomn">
+                                <text style="font-size:26rpx;color:#d55a5c" data-current="0">{{item.db}}元</text>
+                                <text style="font-size:30rpx;color:#7e7e80;" data-current="0">现金卷</text>
+                        </view>
+                                   
+                    </view>
+                     <view  class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} " data-current="1" bindtap="swichNav" >
+                            <view class="style_clomn">
+                                    <text style="font-size:25rpx;color:#d55a5c" data-current="1">{{item.integration}}元</text>
+                                    <text style="font-size:30rpx;color:#7e7e80" data-current="1">省钱</text>
+                            </view>
+                     </view>
+                    <view  class="swiper-tab-list {{currentTab==2 ? 'on' : ''}} " data-current="2" bindtap="swichNav" > 
+                            <view class="style_clomn">
+                                <text style="font-size:26rpx;color:#d55a5c" data-current="2">{{item.hb}}个</text>
+                                <text style="font-size:30rpx;color:#7e7e80" data-current="2">HB</text>
+                            </view>
+                    </view>
+                    <view  class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav" > 
+                            <view class="style_clomn">
+                                <text style="font-size:26rpx;color:#d55a5c" data-current="3">{{item.fh}}元</text>
+                                <text style="font-size:30rpx;color:#7e7e80" data-current="3">赚钱</text>
+                            </view>
+                    </view>
+            </view>
+        </rich-text> 
+    </view>
+</view>
+</block>
+<scroll-view scroll-y style="height:800rpx" lower-threshold="500" bindscrolltolower="lower"  data-current="{{currentTab}}" current="{{currentTab}}"> 
+    
+ <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight-31}}px"  bindchange="bindChange">   
+    <swiper-item> 
+                <rich-text>
+                        <ul class="types">
+                            <li style="padding-left:10rpx;">类型</li>
+                            <li>金额</li>
+                            <li>时间</li>
+                        </ul>                     
+                        <block wx:for="{{getHbDbLogRows}}" wx:key="{{item}}">
+                            <view class="spacing"></view>
+                            <listItmes   item="{{item}}"></listItmes>
+                        </block>
+                    
+                    </rich-text>
+    </swiper-item> 
+    <!-- 省钱 -->
+    <swiper-item> 
+        <view >
+            <rich-text>
+                <ul class="types">
+                    <li style="padding-left:10rpx;">类型</li>
+                    <li>金额</li>
+                    <li>时间</li>
+                </ul>               
+                <block wx:for="{{OrderByMember}}" wx:key="{{item}}">
+                        <view class="spacing"></view>
+                        <moneyItems item="{{item}}"></moneyItems>
+                </block>
+            </rich-text>
+        </view>
+    </swiper-item> 
+     <!-- hb -->
+      <swiper-item>
+            <rich-text>
+                    <ul class="types">
+                        <li style="padding-left:10rpx;">类型</li>
+                        <li>金额</li>
+                        <li>时间</li>
+                    </ul>                     
+                    <block wx:for="{{getHbDbLogHb}}" wx:key="{{item}}">
+                        <view class="spacing"></view>
+                        <listItmes   item="{{item}}"></listItmes>
+                    </block>
+                
+                </rich-text>
+      </swiper-item>
+       <!-- 赚钱 -->
+      <swiper-item>
+            <view >
+                    <rich-text>
+                        <ul class="types">
+                            <li style="padding-left:10rpx;">分润号</li>
+                            <li>分润金额</li>
+                            <li>时间</li>
+                        </ul>
+                        
+                        <block wx:for="{{MemberRows}}" wx:key="{{item}}">
+                                <view class="spacing"></view>
+                                <view>
+                                        <ul class="types_item">
+                                           <li>
+                                               <view >{{item.dividendnum}}</view>
+                                           </li>
+                                           <li>
+                                               <view>  {{item.amountmoney}}</view>
+                                             </li>
+                                           <li> 
+                                               <view>{{item.createtime}}</view>
+                                                   
+                                           </li>
+                                   
+                                       </ul>
+                                   </view>
+                        </block>
+                    </rich-text>
+                </view>
+      </swiper-item>
+ 
+</swiper> 
+<!-- </scroll-view> -->
+</scroll-view>

@@ -1,0 +1,336 @@
+/* pages/management/management.wxss */
+.mana_header{
+    overflow: hidden;
+    width: 100%;
+    background: #18b2ee;
+
+}
+.header_top{
+    padding: 20rpx;  
+}
+.style_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.style_clomn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.header_top_l{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.header_top_r{
+    margin-right: 20rpx;
+}
+.header_top_r text{
+    color: #007aff;
+    font-size: 21rpx;
+}
+.header_bottom{
+    height: 124rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* background: #f4fff3; */
+}
+
+.user_pic image{
+    width: 150rpx;
+    height: 150rpx;  
+    border-radius: 10rpx; 
+}
+.hader_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20rpx;
+    margin-top:21rpx;
+
+}
+.hader_text>text{
+    color: white;
+    font-size: 26rpx;
+
+}
+.bottom_item:not(:last-child){
+    border-right: 1px solid #656565;
+    padding-right: 50rpx;
+}
+.bottom_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bottom_item text:first-child{
+    font-size: 28rpx;
+    color:  #1d18ee;
+
+}
+.bottom_item text:last-child{
+    font-size: 29rpx;
+    color:  white;
+
+}
+.header_foot{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    justify-content: flex-end;
+    margin-top:16rpx;
+    padding-bottom:20rpx;
+    
+}
+.header_foot text{
+    font-size: 26rpx;
+    color: white;
+    margin-right: 20rpx;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.spacing{
+    height: 30rpx;
+    background: #f2f2f2; 
+}
+/* 切换 */
+.swiper-tab{
+    width:676rpx;
+    height:167rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background:white;
+}
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 16.3%;  
+    text-align: center;
+    color: #777777; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+} 
+.swiper-tab-list image{
+    width: 80rpx;
+    height: 80rpx;
+} 
+.on{ color: #badffc;  
+    border-bottom: 5rpx solid #00a2e9;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+
+.store{
+    background: #00a2e9;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.store text:not(:last-child){
+    border-right: 1px solid #cccbcb;
+}
+.store text{
+    color: white;
+    font-size: 29rpx;
+    display:inline-block;
+    width:159rpx;
+    text-align:center;
+    padding-left:20rpx;
+   
+}
+.store_content{
+    background: white;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:20rpx;
+
+
+}
+
+.store_content text{
+    color:black;
+    display:inline-block;
+    width:145rpx;
+    font-size:26rpx;
+    text-align:center;
+    padding-left:20rpx;
+}
+.store_content text:not(:last-child){
+    border-right:1px solid #cccbcb;
+}
+
+.team_hender{
+    display: flex;
+    flex-direction: row; 
+    text-align: center;
+    justify-content: space-around;
+    background: #00a2e9;
+}
+.team_c{
+    display: flex;
+    flex-direction: column; 
+    margin: 20rpx 0rpx;
+}
+.team_hender .team_c:not(:last-child){
+    border-right:1px solid #cccbcb;
+    padding-right: 50rpx;
+}
+
+.team_c text{
+    display: inline-block; 
+    color: white;
+    font-size: 25rpx;
+}
+.team_head {
+    display: flex;
+    flex-direction: row; 
+    text-align:center;
+    align-items: center;
+    height:60rpx;
+    /* line-height: 50rpx; */
+    background: white;
+    margin-top: 20rpx;
+}
+.team_head text:not(:last-child){
+    border-right:1px solid #cccbcb;
+}
+.team_head text{
+    font-size: 25rpx;
+    color: black;
+    display: inline-block;
+    width: 150rpx;
+}
+.detail image{
+    padding-left:50rpx;
+    padding-top:12rpx;
+    width:50rpx;
+    height:50rpx;
+
+}
+.hide{
+    display: none;
+    }
+.show{
+    display: block;
+}
+.team_head_content{
+    height: 150rpx;
+    background: #ecf0f3;
+}
+.area{
+    width:100rpx;
+    height: 150rpx;
+    word-wrap:break-word;  
+}
+.content_clomn{
+    display: flex;
+    flex-direction: column;
+    width: 150rpx;
+}
+.content_clomn:not(:last-child){
+    border-right:1px solid #cccbcb;
+}
+.content_clomn text{
+    font-size: 25rpx;
+    
+}
+
+swiper{
+    background: #ecf0f3;
+}
+
+
+.num{
+    height: 63rpx;
+    border-bottom: 1px solid #eeeeee;
+    background: white;
+}
+.settle_text_l{
+    float: left;
+    width: 400rpx;
+    padding-left: 20rpx;
+}
+.settle_text_l text{
+    font-size:33rpx;
+    color: #31afec;
+}
+.settle_text_r text{
+    font-size:33rpx;
+    color: black;
+}
+.settle_text_r{
+    float: left;
+}
+.settle_text_te text {
+    color:#31afec;
+}
+.settlement{
+    margin-top: 80rpx;
+    width:366rpx;
+    height:81rpx;
+    border-radius:37rpx;    
+    background: #31afec;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.bottom{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+}
+.settlement text{
+    font-size: 30rpx;
+    color: white;
+    padding-left: 20rpx;
+
+}
+.settlement text:first-child{
+    border-right: 1px solid white;
+    padding-right: 30rpx;
+}
+
+
+.types_item{
+    width: 750rpx;
+    height: 80rpx;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+li>view{
+ font-size: 25rpx;
+ color: black;
+ text-align: center;
+ width: 247rpx;
+ height: 60rpx;
+}
+
+li:not(:last-child)>view{ 
+    border-right: 1px solid black;   
+} 
+
+.spacing{
+    height: 20rpx;
+    background: #f2f2f2;
+}

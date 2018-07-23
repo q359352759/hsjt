@@ -1,0 +1,259 @@
+<block wx:for="{{[userData]}}" wx:key="userData" wx:for-item="userData">
+<view class="mana_header">
+    <view class="header_top style_row">
+        <!-- <view class="header_top_l"> -->
+                <view class="user_pic">
+                        <image src="{{userData.photo}}" class="pic"></image>
+                </view> 
+                <view class="hader_text">
+                    <text>合伙人：{{userData.realName}}</text>
+                    <text>等级：{{userData.start}}</text>
+                    <text style="font-size:25rpx;">{{userData.area}}</text>
+                </view>
+        <!-- </view> -->
+        <!-- <view class="header_top_r style_clomn">
+            <text>内部体验</text>
+            <text>二维码</text>
+            <text>业务合作协议</text>
+
+        </view> -->
+            
+    </view>
+    <view class="header_bottom">
+        <view class="bottom_item">
+            <text>会员</text>
+            <text>{{MemNumBer}}</text>
+        </view>
+        <view class="bottom_item">
+                <text>商家</text>
+                <text>{{storeData.length}}</text>
+            </view>
+        <view class="bottom_item">
+                    <text>团队</text>
+                    <text>{{MemMber}}</text>
+        </view>
+        <view class="bottom_item">
+                    <text>可提现</text>
+                    <text>{{multiple}}</text>
+        </view>  
+    </view>
+    <view class="header_foot">
+        <text>内部体验</text>
+        <text>二维码</text>
+        <text>业务合伙协议</text>
+    </view>
+</view>
+<view class="spacing"></view>
+<view class="nav">
+   <view class="swiper-tab"> 
+                    <view  class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav" >
+                            <image src="../../images/man01.png"   data-current="0" ></image>
+                            <text  data-current="0" >会员</text>
+                    </view>
+                     <view  class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" >
+                            <image src="../../images/man02.png"  data-current="1"></image>
+                            <text data-current="1">商家</text>     
+                     </view>
+
+                    <view  class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav" > 
+                            <image src="../../images/man03.png"  data-current="2"></image>
+                            <text data-current="2">团队</text>       
+                    </view>
+
+                    <view  class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav" > 
+                            <image src="../../images/man04.png" data-current="3" ></image>
+                            <text data-current="3">结算</text> 
+                            
+                    </view>
+    </view>
+</view>
+<view class="spacing"></view>
+</block>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px"  bindchange="bindChange"> 
+        <swiper-item> 
+            <view >
+               会员
+            </view>
+        </swiper-item> 
+        <!-- 商家 -->
+        <swiper-item> 
+            <view class="store" >
+                <text>商家名称</text>
+                <text>加盟日期</text>
+                <text>会员人数</text>
+                <text>联系电话</text> 
+            </view>
+
+        <view class="store_content">
+                <text>商家名称</text>
+                <text  style="padding-right:21rpx">2018-8-2</text>
+                <text style="padding-right:20rpx">4444440</text>
+                <text>15882378045</text> 
+        </view>
+        
+        </swiper-item> 
+         <!-- 团队 -->
+          <swiper-item>
+                <view class="team_hender" >
+                    <view class="team_c">
+                            <text>推广</text>
+                            <text>10人</text>
+                    </view>
+                    <view class="team_c">
+                            <text>推广</text>
+                            <text>10人</text>
+                    </view>
+                    <view class="team_c">
+                            <text>推广</text>
+                            <text>10人</text>
+                    </view>
+                        
+                </view>
+                <view class="team_head">
+                    <text>姓名</text>
+                    <text>等级</text>
+                    <text>会员</text>
+                    <text>金额</text>
+                    <text>详情</text>
+                   
+                </view>
+                <view class="team_head">
+                        <text>姓f地方名</text>
+                        <text>五星级</text>
+                        <text>40</text>
+                        <text>0</text>
+                        <view class="detail hide{{showView?'':'show'}}" bindtap="handeDetil">
+                                <image src="../../images/xia.png"></image>
+                        </view>
+                        <view class="detail hide{{showView?'show':''}}" bindtap="handeDetil">
+                                <image src="../../images/shang.png"></image>
+                        </view>
+       
+                </view>
+                <view class="hide{{showView?'show':''}}">
+                        <view class="team_head_content team_head">
+                               <view class="content_clomn">
+                                   <text>区域</text>
+                                   <text >四川省,成都市,自贡市</text>
+                               </view>
+                               <view class="content_clomn">
+                                    <text>差额</text>
+                                    <text>0</text>
+                                </view>
+                                <view class="content_clomn">
+                                        <text>补助</text>
+                                        <text>0</text>
+                                </view>
+                                <view class="content_clomn">
+                                            <text>区域</text>
+                                            <text>0</text>
+                                </view>
+                                <view class="content_clomn">
+                                        <text>已奖</text>
+                                        <text>0</text>
+                                </view>
+                        </view>
+                </view>
+                <view class="team_head">
+                        <text>姓f地方名</text>
+                        <text>五星级</text>
+                        <text>4hg0</text>
+                        <text>023</text>
+                        <view class="detail " bindtap="handeDetil">
+                                <image src="../../images/xia.png"></image>
+                        </view>
+                      
+                </view>
+                <view class="team_head">
+                        <text>姓f地方名</text>
+                        <text>五星级</text>
+                        <text>40gdfg</text>
+                        <text>0gg</text>
+                        <view class="detail " bindtap="handeDetil">
+                                <image src="../../images/xia.png"></image>
+                        </view>
+                      
+                </view>
+                   
+          </swiper-item>
+           <!-- 结算 -->
+          <swiper-item>
+              <view class="settle">
+                  <view class="num">
+                     <view class="settle_text_l">
+                        <text>佣金：1000.0</text> 
+                     </view>
+                     <view class="settle_text_r">
+                         <text>累计：50元</text> 
+                     </view>
+                  </view>
+                  <view class="num">
+                        <view class="settle_text_l">
+                           <text>佣金：100fdsf0.0</text> 
+                        </view>
+                        <view class="settle_text_r">
+                            <text>累计：5fsdf0元</text> 
+                        </view>
+                     </view>
+                     <view class="num">
+                            <view class="settle_text_l">
+                               <text>佣金：1</text> 
+                            </view>
+                            <view class="settle_text_r">
+                                <text>累计：500元</text> 
+                            </view>
+                         </view>
+                        <view class="num">
+                                <view class="settle_text_l">
+                                   <text>佣金：1</text> 
+                                </view>
+                                <view class="settle_text_r">
+                                    <text>累计：5元</text> 
+                                </view>
+                        </view><view class="num">
+                          <view class="settle_text_l">
+                                <text>佣金：100000.0</text> 
+                            </view>
+                            <view class="settle_text_r">
+                             <text>累计：500000元</text> 
+                            </view>
+                        </view>
+              </view>
+              <view class="spacing"></view>
+              <view class="settle">
+                    <view class="num">
+                       <view class="settle_text_l">
+                          <text>佣金：1000.0</text> 
+                       </view>
+                       <view class="settle_text_r settle_text_te">
+                           <text>累计：50元</text> 
+                       </view>
+                    </view>
+                    <view class="num">
+                          <view class="settle_text_l">
+                             <text>佣金：100fdsf0.0</text> 
+                          </view>
+                          <view class="settle_text_r settle_text_te">
+                              <text>累计：5fsdf0元</text> 
+                          </view>
+                       </view>
+                       <view class="num">
+                              <view class="settle_text_l">
+                                 <text>佣金：1</text> 
+                              </view>
+                              <view class="settle_text_r settle_text_te">
+                                  <text>累计：500元</text> 
+                              </view>
+                           </view>
+              </view>
+              <view class="bottom">
+                    <view class="settlement">
+                            <text>结算记录</text>
+                            <text>提交结算</text>
+                        </view>
+
+              </view>
+            
+          </swiper-item>
+     
+    </swiper> 

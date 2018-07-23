@@ -1,0 +1,84 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/management/management",
+   
+    
+    "pages/test/test",
+   
+    "pages/applypartner/applypartner",
+    "pages/setupshop/setupshop",
+    "pages/teste/teste",
+  
+    "pages/shoppingstore/shoppingstore",
+    "pages/outprofit/outprofit",
+    "pages/cash/cash",
+    "pages/homepage/homepage",
+    "pages/shoppingmall/shoppingmall",
+    "pages/collection/collection",
+    "pages/register/register",
+    "pages/mine/mine",
+    "pages/detailshopping/detailshopping",
+    "pages/shoppingcart/shoppingcart",
+    
+    "pages/collectadress/collectadress",
+    "pages/account/account",
+    "pages/addcollectadress/addcollectadress",
+    "pages/forgetpossword/forgetpossword",
+    "pages/paymentpassword/paymentpassword",
+    "pages/forgetpaypassword/forgetpaypassword",
+    "pages/index/index",
+    "pages/detailstore/detailstore",
+    "pages/logs/logs",
+   
+    "pages/mineorder/mineorder",
+    "pages/morestore/morestore",
+    "pages/news/news",
+    "pages/notice/notice",
+    "pages/outmoney/outmoney"
+  
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "惠众积分",
+    "navigationBarTextStyle": "white",
+    "backgroundColorBottom": "#ffffff"
+  },
+  "tabBar": {
+    "selectedColor": "#b6d7b0",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "./images/tabs/home.jpg",
+        "selectedIconPath": "./images/tabs/homegreen.jpg",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shoppingmall/shoppingmall",
+        "iconPath": "./images/tabs/shop.jpg",
+        "selectedIconPath": "./images/tabs/shopgreen.jpg",
+        "text": "商铺"
+      },
+      {
+        "pagePath": "pages/shoppingstore/shoppingstore",
+        "iconPath": "./images/tabs/shopping.jpg",
+        "selectedIconPath": "./images/tabs/shoppinggreen.jpg",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "./images/tabs/message.jpg",
+        "selectedIconPath": "./images/tabs/messagegreen.jpg",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "./images/tabs/my.jpg",
+        "selectedIconPath": "./images/tabs/mygreen.jpg",
+        "text": "我的"
+      }
+    ]
+  }
+}

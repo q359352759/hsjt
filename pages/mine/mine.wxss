@@ -1,0 +1,119 @@
+
+.container {
+    width: 750rpx;
+    height: 358rpx;
+    background: #23cfe7;
+  }
+  .userinfo{
+      display: flex;
+      flex-direction: row;
+  }
+  .user{
+    margin-top: 75rpx;
+    margin-left: 74rpx;
+    display: flex;
+    flex-direction: row;
+
+  }
+  .userNames{
+      display: flex;
+      flex-direction: column;
+      padding-top: 20rpx;
+  }
+  .pic{
+      width: 50rpx;
+      height: 47rpx;
+      padding-top: 10rpx;
+  } 
+  .userinfo-nickname{
+      color: white;
+      font-size: 33rpx;
+  }
+
+  .userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+  .user text{
+    margin-top: 30rpx;
+  }
+ .hender_yewu{
+     height: 130rpx;
+     padding: 20rpx;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+ }
+ .num1{
+     display: flex;
+     flex-direction: column;
+ }
+ .num1 text:first-child{
+     font-size: 34rpx;
+     color: #2facee;
+
+ }
+ .num1 text:last-child{
+    font-size: 30rpx;
+    color: #beb8b8;
+    padding-top: 10rpx;
+    
+}
+.spacing{
+    height: 20rpx;
+    background: #f2f2f2;
+}
+.order{
+    height: 60rpx;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.order text:first-child{
+    font-size: 30rpx;
+
+}
+.order text:last-child{
+    font-size: 25rpx;
+    color: #beb8b8;
+    
+}
+.mine_fukuan{
+    height: 155rpx;
+
+}
+.number1 {
+    text-align: center;
+}
+.number1 image{
+    width: 86rpx;
+    height: 80rpx;
+
+}
+.list{
+    margin: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+.group_num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.group_num image{
+    width: 66rpx;
+    height: 69rpx;   
+}
+
+.more image{
+    width:49rpx;
+    height:51rpx
+}

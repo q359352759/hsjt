@@ -1,0 +1,21 @@
+<view class="goods_min" >
+        <view class="goods_l">
+                 <view class="pic">
+                                 <image src="{{item.imagepath[0]}}" ></image>
+                         </view>
+                 <view class="goods_content">
+                         <view class="goods_title">
+                                         <text>{{item.productname}}</text>
+                         </view>
+                         <view class="price">
+                                         <text>￥{{item.minsaleprice}}</text>
+                         </view>    
+                 </view>
+        </view>
+       
+        <view class="goods_del"  catchtap="delGoods" data-item="{{item}}" >
+                 <image src="../../images/del.png" ></image>  
+        </view>
+</view>
+
+<!-- <view class="spacing"></view> -->

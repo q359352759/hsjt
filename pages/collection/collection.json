@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "CollectionItems": "../../components/collectionItems/collectionItems"
+      },
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00a2e9",
+    "navigationBarTitleText": "收藏",
+    "navigationBarTextStyle": "white"
+   
+}

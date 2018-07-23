@@ -1,0 +1,154 @@
+
+<view  class="home_body">
+    <!-- 领取红包 -->
+    <view class="hide{{showView?'show':''}} RedEnvelopes"  >
+        <view class="packet_content">
+                <image src="../../images/packet.png" style="width:750rpx;height:930rpx" > </image>
+                <view class="packet_con">
+                    <view class="packet_pic">
+                            <image src="../../images/khjk.png" bindtap="onChangeShowState" style="width:50rpx;height:60rpx" > </image> 
+                    </view>
+                        <view class="packet_toptext">
+                            <text>先领红包、再付款</text>
+                            <text>立即省钱</text>
+                        </view> 
+                        
+                        <view class="new_person">
+                              <text>新人礼包</text> 
+                              <text  style="font-size:70rpx;">20</text>
+                              <text>元</text>
+                        </view>
+                        <view class="input">
+                                <input type="text" class="phone" placeholder="手机号"  bindblur="bindinputname" maxlength="11" placeholder-class="place-holder" value="{{userName}}"/> 
+                        </view>
+                        <view class="input">
+                                <input type="text" class="phone" placeholder="验证码" bindblur="bindinputCode"  placeholder-class="place-holder" value="{{usercode}}"/>
+                                <view class="yanzhengm">
+                                        <text disabled='{{disabled}}' data-id="2" bindtap="getVerificationCode">{{time}}</text>
+                                </view>
+                        </view>
+                        <view class="btn">
+                            <text>立即领取</text>
+                        </view>
+                       
+                        
+                </view>
+        </view>
+    </view>
+    <!-- 分享界面 -->
+    <view class="hidebody" bindtap="handeClickShareHide" hidden="{{flag}}" >
+            <view class="fenxiangzhiyin">
+                <image src="../../images/20170320222719_57583.png"></image>
+                <view></view>
+                <text>分享领取红包</text>
+            </view>
+            <image src="../../images/822569965339995340.c1e9142.png"  >
+            </image>
+    </view>
+    <!-- 分享界面 -->
+<view class="bg">
+  <image src="../../images/home/1hfgh2.jpg" style="width:750rpx;height:868rpx" > 
+</image>
+</view>
+    <view class="antime canvas">
+            <canvas canvas-id="myCanvas"  class="myCanvas" />
+            <canvas canvas-id="myCanvas_2" class="myCanvas_2" />
+            <view class="canvas_pic">
+                    <image src="../../images/2.png" >
+                    </image>  
+            </view>
+        <!-- <view class="canvas">
+                <image src="../../images/a.png" class="myCanvas_1">       
+                </image>  
+                <image src="../../images/b.png" class="myCanvas_2">
+                </image>  
+                <image src="../../images/cd.png" class="myCanvas_3">
+                </image>
+                <image src="../../images/2.png" class="myCanvas_4">
+                </image>  
+        </view> -->
+    </view>
+   <block wx:for="{{[userTotal]}}" wx:key="{{item}}">
+    <view class="lieji" src="../../images/a.png">
+            <text>累计分润</text>
+            <view style="padding-left:37rpx;">fdf</view>
+            <text style="padding-left:37rpx;"> 元</text>
+    </view>
+        <view class="fenlei">
+            <view class="pict_l">
+                <view bindtap="handeClickCash">
+                        <image src="../../images/home/icon_132.png"  class="img1"> 
+                        </image>
+                        <view class="iamg1_text"   >
+                            <text style="font-size:28rpx;color:white;padding-left:5rpx;">现金卷</text>
+                            <text style="font-size:20rpx;color:white;padding-top:5rpx;">￥{{item.db}}</text>
+                        </view>
+                </view>
+
+                <view bindtap="handeClickSave">
+                        <image src="../../images/home/icon_131.png"  class="img2">   
+                        </image>
+                            <view class="iamg2_text">
+                            <text style="font-size:28rpx;color:white;padding-left:10rpx;">省钱</text>
+                            <text style="font-size:20rpx;color:white;padding-top:5rpx;">￥{{item.integration}}</text>
+                            </view>
+                    </view>
+                </view>
+        </view>
+        <view class="fenlenl">
+                <view class="pict_r">
+                        <view bindtap="handeClickHb">
+                        <image src="../../images/home/icon_134.png"  class="img3"> 
+                        </image>
+                        <view class="iamg3_text">
+                            <text style="font-size:28rpx;color:white;padding-left:10rpx;">HB</text>
+                            <text style="font-size:20rpx;color:white;padding-top:5rpx;">￥{{item.hb}}</text>
+                            <!-- <text style="font-size:20rpx;color:white;padding-top:5rpx;"   wx:if="{{item.hb?"":""}}">￥{{item.hb}</text> -->
+                        </view>
+                    </view>
+
+                    <view bindtap="handeClickMake">
+                        <image src="../../images/home/icon_133.png"  class="img4"> 
+                        </image>
+                        <view class="iamg4_text">
+                            <text style="font-size:28rpx;color:white;padding-left:10rpx;">赚钱</text>
+                            <text style="font-size:20rpx;color:white;padding-top:5rpx;">￥{{item.fh}}</text>
+                        </view>
+                    </view>
+
+                    </view>
+        </view>
+    <view class="ma_pre"> 
+        <view class="ma">
+            <view class="ma_t">
+                 <image src="../../images/home/money_03.png" ></image>
+                 <text >收 钱</text>
+            </view>
+            <view class="ma_t">
+                 <image src="../../images/home/money_05.png" bindtap="saoma"></image>
+                 <text  >扫一扫</text>
+            </view>
+           <view class="ma_t">
+               <image src="../../images/home/money_07.png" ></image>
+               <text >付 钱</text>
+           </view>   
+        </view>
+    </view>
+    </block>
+<!-- </view> -->
+
+<view class="kaidian">
+    <image src="../../images/home/kaidian.jpg" bindtap="handeClickOpenStore" style="width:372rpx;height:144rpx">
+    </image>
+    <image src="../../images/home/chuangye.jpg" bindtap="handeClickBusiness" style="width:372rpx;height:144rpx">
+     </image>
+</view>
+<view class="guangago">
+    <image src="../../images/home/hongbao.jpg" bindtap="handeClickShareShow" style="width:750rpx;height:134rpx">
+    </image>
+</view>
+</view>
+
+
+
+

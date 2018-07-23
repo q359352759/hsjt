@@ -1,0 +1,78 @@
+
+        <view class="content">
+                <view class="name">
+                    <label>申请区域：</label>
+                    <input class='ship_citychoose' placeholder="点击选择" value="{{text}}" focus="{{focus}}" bindfocus="open" />
+                </view>
+                <!-- 影藏区域 -->
+                   
+    <!--弹出动画  -->
+    <view wx:if="{{condition}}" class="citypicker"  >
+
+            <picker-view indicator-style="height: 50px;"   style="width: 100%; height: 300px; background: white; z-index: 10;" bindchange="bindChange"   value="{{value}}" data-item="{{item}}"  class="citybody">
+              <view class="cityheader">
+                <view bindtap="handelClose" class="city-cancel" value="{{value}}">取消</view>
+                <view bindtap="handelSave" class="city-true"  value="{{value}}">确定</view>
+              </view>
+      
+              <picker-view-column>
+      
+                <view   wx:key="item" wx:for="{{cityData}}"   wx:for-item="num1" style="line-height: 50px;padding-left:10px;">
+                  {{num1.province.areaname}}
+                </view>
+      
+              </picker-view-column>
+              <picker-view-column>
+      
+                <view  wx:key="item" wx:for="{{cityData[value[0]].listcity}}"   style="line-height: 50px;padding-left:10px;">
+                  {{item.city.areaname}}
+                </view>
+      
+              </picker-view-column>
+              <picker-view-column>
+      
+                <view  class="{{qyshow ? 'disappear':''}}"  wx:for="{{cityData[value[0]].listcity[value[1]].districtList}}"  wx:key="item"  style="line-height: 50px;padding-left:10px;">
+                    {{item.areaname}}
+                </view>
+      
+              </picker-view-column>
+            </picker-view>
+          </view>
+      
+           
+            </view>
+
+            <view class="spacing"></view>
+            <view class="content">
+                <view class="name">
+                    <label>真实姓名</label>
+                    <input type="text" placeholder="请输入中文名"   bindblur="bindName" value="{{name}}"  style="padding-left:14rpx;"/>
+                </view>
+                <view class="name">
+                    <label>手机号</label>
+                    <input type="text" placeholder="请输入有效手机号"   bindblur="bindPhone" value="{{phone}}"  style="padding-left:14rpx;"/>
+                </view>
+                <view class="name">
+                    <label>推荐人</label>
+                    <input type="text" placeholder="请输入推荐人手机号"  bindblur="bindAdviser" value="{{adviserPhone}}"   style="padding-left:14rpx;"/>
+                 </view>
+            </view>
+            <view class="spacing"></view>
+            <view class="content">
+                    <view class="name renzheng">
+                            <label>商家合作协议</label>
+                            <image src="../../images/qian.png"></image>
+                       </view>
+                       <view class="text">
+                           <image src="../../images/gfdsf.png"></image>
+                            <text>成为合伙人的好处</text>
+                       </view>
+                       
+                       <view class="btn" bindtap="btn">
+                            <button>提交</button>
+                        </view>     
+            </view>
+
+
+
+

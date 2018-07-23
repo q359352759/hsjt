@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "storeItems": "../../components/storeItems/storeItems"
+      },
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0198e9",
+    "navigationBarTitleText": "门店",
+    "navigationBarTextStyle": "#696d69"
+}

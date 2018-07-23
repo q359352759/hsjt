@@ -1,0 +1,57 @@
+.spacing{
+    height: 30rpx;
+    background:#efeff4; 
+}
+.conter{
+    padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border:1px solid #efeff4;
+}
+.conter_l{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.conter_r{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.userpic image{
+    width: 100rpx;
+    height: 100rpx;
+
+}
+.userdata{
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.userdata>text{
+    font-size: 30rpx;
+    margin-top: 20rpx;
+}
+.upadata{
+    display: inline-block;
+    width: 85rpx;
+    height: 59rpx;
+    text-align: center;
+    line-height: 59rpx;
+    border:1px solid #007aff;
+    border-radius: 10rpx;
+    z-index: 10;
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+}
+.btn>text{
+      margin-left: 10rpx;
+}

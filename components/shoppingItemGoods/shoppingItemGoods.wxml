@@ -1,0 +1,37 @@
+
+
+
+<view class="shoping_item_c" catchtap="onTapItem" data-item="{{item}}">
+
+
+        <view  wx:if="{{item.imagepath.length>0}}" >
+                        <image   src="{{item.imagepath[0]}}" class="shopping_item_pic"  bindload="imgload"></image>
+        </view>
+
+        <view  wx:if="{{item.imagepath.length==0}}" class="shopping_item_pic">
+                        <!-- <image   src="kljkl" class="shopping_item_pic" ></image> -->
+                <view class="shopping_item_pic nullpic">暂无图片</view>
+        </view>
+
+            <view class="shopping_item_text">
+                <view class="item_name">
+                    <text class="shopping_name">{{item.productname}}</text>
+                </view> 
+                <view class="free_shipping">                  
+                        <text class="bao">包邮</text>
+                        <text class="directly">官方直营</text>
+                </view>
+                <view class="shopping_detail">
+                        <view class="item_money">
+                                <text class="newPrice" >{{item.minsaleprice}}</text>
+                                <text class="oldPrice" >{{item.marketprice}}</text>
+                        </view>
+                        <view class="item_xiaoliang">
+                                <text class="shopping_x">销</text>
+                                <text class="shopping_num" >{{item.salecounts}}</text>
+                        </view> 
+
+                </view>
+              
+            </view>
+    </view> 

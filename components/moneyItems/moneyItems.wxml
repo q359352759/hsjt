@@ -1,0 +1,30 @@
+<!-- 
+  <view class="door">
+    <view class="doorstors">
+        <view class="door_l">
+            <text class="door_text">心语便民购物店</text>
+            <text  class="door_text"> 消费： 200元</text>
+        </view>
+        <view class="door_l">
+                <text  class="door_text">2017-08-09 09:35:49</text>
+            <text  class="door_text">省钱:20元</text>
+        </view>
+    </view>
+</view> -->
+
+<view>
+        <ul class="types_item">
+           <li>
+               <view >消费省钱</view>
+           </li>
+           <li>
+               <view> {{item.integration}}元</view>
+             </li>
+           <li> 
+               <view>{{item.createdate}}</view>
+                   
+           </li>
+   
+       </ul>
+   </view>
+   <!-- <view class="spacing"></view> -->

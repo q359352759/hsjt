@@ -1,0 +1,238 @@
+/* .shoptype{
+    padding: 20rpx;
+    height: 50rpx;
+    display: flex;
+    flex-direction: row;
+
+}
+.shoptype label{
+    white-space: nowrap;
+    font-size: 38rpx;
+    line-height: 50rpx;
+    letter-spacing: 3rpx;
+    color: #010101;
+} */
+/* 切换 */
+scroll-view{
+    /* overflow: hidden; */
+    
+}
+.swiper-tab{
+    width:676rpx;
+    height:110rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background:white;
+}
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 29.3%; 
+    height:77rpx; 
+    text-align: center;
+    color: #777777;  
+}  
+.on{ color: #badffc;  
+    border-bottom: 5rpx solid #ff3b00;}  
+  
+.swiper-box{ display: block;
+     /* height: 100%;  */
+     width: 100%; 
+     /* overflow: auto; */
+     }  
+/* .swiper-box view{  
+    text-align: center;  
+} */
+.phone_one{
+    width: 303rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    padding-left: 20rpx;
+    /* text-align: center; */
+    border-radius: 10rpx;
+    position: relative;
+    border: 1rpx solid #00a2e9;
+}
+.phone_one text{
+    position:absolute;
+    right:20rpx;
+    top:18rpx;
+    width:0;
+    height:0;
+    transition: All 0.4s ease;  
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:11px solid #00a2e9;
+}
+.postiton{
+    position: relative;
+    margin-left:31rpx;
+}
+.person_box{
+    position:absolute;
+    top: 37rpx;
+    left: 5rpx;
+    width: 308rpx;
+    height: 108rpx;
+    z-index: 10;
+   
+}
+.phone_personal{
+    font-size: 31rpx;
+}
+.phone_select{
+    background: #00a2e9;
+   
+    border-bottom: 1px solid #f0f0f0;
+
+}
+.select_one{
+    font-size: 31rpx;
+    margin-top: 20rpx;
+    color: white;
+}
+.rotateRight{
+    transform: rotate(180deg); 
+}
+.is_checked{  
+    border: 1px solid #FE0002 ;  
+    color: #FE0002 ;  
+    background: #fff;  
+  }  
+.normal{  
+    border: none;  
+    color: #333;  
+    background: #F0F1EC;  
+  }
+.spacing{
+    height: 20rpx;
+    background: #f2f2f2;
+
+  }
+  .content{
+      padding: 20rpx;
+  }
+  .name{
+      height: 100rpx;
+      border-bottom:1px solid #f0f0f0;
+      display: flex;
+      flex-direction: row;
+      /* text-align: center; */
+     
+
+  }
+  .name label{
+    white-space: nowrap;
+    font-size: 35rpx;
+    line-height:100rpx;
+    letter-spacing: 3rpx;
+    color: #010101;
+    line-height: 80rpx;
+  }
+  .name input{
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 35rpx;
+    text-align: center;
+    z-index: -2;
+
+  }
+  .picker{
+      color: #757575;
+  }
+  .name textarea{
+      padding-left: 20rpx;
+      height: 95rpx;
+      padding-top: 20rpx;
+
+  }
+  .style_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .userinfo image{
+    width:72rpx;
+    height:59rpx;
+
+  }
+
+  .renzheng image{
+    width:51rpx;
+    height:51rpx;
+  }
+  .btn button{
+    width: 700rpx;
+    height:80rpx;
+    background-color: #df3121;
+    border-radius: 10rpx;
+    font-size:35rpx;
+    line-height: 80rpx;
+    letter-spacing: 3rpx;
+    color: #fff;
+    z-index: -2;
+      
+  }
+  .choose{
+      position: fixed;
+      top: 0rpx;
+      left: 0rpx;  
+  }
+  .choose_top{
+    position: relative;
+    top: 0rpx;
+    left: 0rpx;
+    z-index: 1;
+    background: #757575;
+    opacity: 0.5;
+    height: 1000rpx;
+    width: 750rpx;
+  }
+  .choose_bottom{
+    position: relative;
+    bottom: 1rpx;
+    left: 0rpx;
+    background: white;
+    z-index: 10;
+    width: 750rpx;
+    height: 500rpx;
+   
+  }
+  .style_clomn{
+      display: flex;
+      flex-direction: column;
+  }
+  .choose_content{ 
+    padding: 20rpx;
+     
+      
+  }
+  .num {
+      height: 80rpx;
+      margin-top: 10rpx;
+      border-bottom: 1px solid #f0f0f0;
+      padding-bottom: 20rpx;
+  }
+  .num text{
+      font-size: 38rpx;
+    
+  }
+  .num  button{
+      width: 120rpx;
+      height: 60rpx;
+      text-align: center;
+      line-height: 60rpx;
+      font-size: 25rpx;
+  }
+  .active{
+      background: #f0f0f0;
+  }
+  .hide{
+    display: none;
+   }
+   .show{ 
+    display: block;
+   }

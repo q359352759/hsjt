@@ -1,0 +1,123 @@
+
+
+
+
+<!-- <view >
+    <button  class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'隐藏':'显示'}}</button>
+
+    <button class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'隐藏':'显示'}}</button>
+   </view>
+   <view class="hide{{showView?'show':''}}">
+   <text class="text">我是被显示被隐藏控件</text>
+   </view> -->
+   <!-- <view class='text' bindtap='chooseSezi'>请选择：颜色/尺码</view>
+<view class='maskLayer' wx:if="{{chooseSize}}" bindtap='hideModal'></view>
+<view class='choose' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+<view class="choose_header">
+    <image src="../../images/personal_22.jpg" ></image>
+    <view class="choose_text">
+      <text>￥60元</text>
+      <text>库存</text>
+      <text>已选择</text>
+    </view>
+</view>
+</view> -->
+<!-- <block wx:for="{{array}}" wx:key="item">
+<view class="chose-txt" data-price="{{item.price}}"  data-id="{{index}}" bindtap="choseTxtColor" style="{{index == id?'color:red;border:1rpx solid red':'border:1rpx solid gainsboro;color:gray'}}">
+    <text class="chose-p" >{{item.name}}</text>
+     <text class="chose-p" >{{item.price}}元</text>
+</view>
+</block> -->
+<!-- <canvas canvas-id="myCanvas" style="border: 1px solid;"/> -->
+<!-- <view class='container'>
+        <canvas style='width:300px;height:200px;' canvas-id='canvas'></canvas>
+    </view> -->
+    <!-- <image class="save " src="{{isClick?'../../images/shoucang.png':'../../images/tabs/message.jpg'}}" bindtap="haveSave"></image>
+   <text class="saveText">{{isClick?'已收藏':'收藏'}}</text> -->
+   <!-- <text>画布测试</text>
+<canvas canvas-id="myCanvas" id="myCanvas" bindtap="start"/>
+<canvas canvas-id="myCanvas_2" id="myCanvas_2" bindtap="start"/> -->
+<!-- <view class="circleBar">
+<view class="wrap">
+        <view class="top">
+            <canvas class="cir" style=' width:106px; height:106px;' canvas-id="canvasArc"></canvas>
+            <view class="centerWord">{{resultComment}}</view>
+        </view>
+      </view>
+    </view>  -->
+
+    <!-- <view class="free-btns" style="margin-top: 10vh;background:none;">
+        <button class="free-btn" bindtap="toggleDialog">
+          选定国家：{{value}}
+        </button>
+      </view>
+    
+      <view class="free-dialog {{ showDialog ? 'free-dialog--show' : '' }}">
+        <view class="free-dialog__mask" bindtap="toggleDialog" />
+        <view class="free-dialog__container">
+          <view style="padding: 5% 5% 15%;">
+            <form bindsubmit='submit' bindreset="reset">
+              <view bindtap='freetoBack' class="free-button free-dialog-reset">取消</view>
+              <view bindtap='freeBack' class="free-button free-dialog-submit">确定</view>
+    
+              <radio-group class='free-radios' bindchange="radioChange">
+                <label class="free-radio" bindtap="click" wx:for="{{items}}" wx:key="{{items}}" data-id="{{index}}" style="{{index==id?'background:#48c23d;color:#fff;':'background:#fff;color:#000;'}}">
+                  <radio value="{{item.name}}" name="{{item.value}}"></radio>
+                  <label class="free-text">{{item.value}}</label>
+                </label>
+              </radio-group>
+            </form>
+    
+          </view>
+        </view>
+      </view> -->
+    
+      <view class="ship_list">
+          <view class='ship_name'><text>联系人</text><input class='ship_focus' placeholder="姓名" auto-focus/></view>
+           <view class='ship_name'><text>手机号</text><input class='ship_focus' placeholder="请输入手机号" auto-focus/></view>
+           <view class='ship_area'>
+                <text>选择地区</text>
+                <!--要显示的省-市-区-->
+                <input class='ship_citychoose' placeholder="选择" value="{{province}}-{{city}}-{{county}}" focus="{{focus}}" bindfocus="open" /><!--要显示的省-市-区-->
+           </view>
+           <view class='buy_street'>
+                <text>详细地址</text>
+                <textarea class='buy_streetnumber' placeholder='需要填写街道楼栋楼层或门牌号信息'></textarea>
+           </view>
+    </view>
+    
+    <!--弹出动画  -->
+    <view wx:if="{{condition}}" class="citypicker">
+
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" data-item="{{item}}"  bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+          <view bindtap="open" class="city-cancel">取消</view>
+          <view bindtap="open" class="city-true">确定</view>
+        </view>
+
+        <picker-view-column>
+
+          <view  class="{{select1 == index ? 'current' : ''}}" wx:key="item" wx:for="{{cityData}}"   wx:for-item="num1" style="line-height: 50px;padding-left:10px;">
+            {{num1.province.areaname}}
+          </view>
+
+        </picker-view-column>
+        <picker-view-column>
+
+          <view class="{{select2 == index ? 'current2' : ''}}" wx:key="item" wx:for="{{cityData[value[0]].listcity}}"   style="line-height: 50px;padding-left:10px;">
+            {{item.city.areaname}}
+          </view>
+
+        </picker-view-column>
+        <picker-view-column>
+
+          <view  class="{{select3 == index ? 'current3' : ''}} {{qyshow ? 'disappear':''}}"  wx:for="{{cityData[value[0]].listcity[value[1]].districtList}}"  wx:key="item"  style="line-height: 50px;padding-left:10px;">
+              {{item.areaname}}
+          </view>
+
+        </picker-view-column>
+      </picker-view>
+    </view>
+
+
+    

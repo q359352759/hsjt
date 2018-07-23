@@ -1,0 +1,76 @@
+/* pages/register/register.wxss */
+.reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.regbut button{
+    width: 488rpx;
+    height: 76rpx;
+    background: #30abee;
+    border-radius: 30rpx;
+    color: white;
+    text-align: center;
+    line-height: 76rpx;
+    margin-top: 50rpx;
+  }
+  .reg text{
+    width: 488rpx;
+    height: 76rpx;
+    color: black;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 76rpx;
+    margin-top: 50rpx;
+  }
+.reg input{
+    width: 488rpx;
+    height: 65rpx;
+    font-size: 28rpx;
+    padding-left: 20rpx;
+    border-bottom: 1px solid black;
+}
+.username{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+  }
+  .username image{
+    width:63rpx;
+    height:59rpx;
+    
+    padding-top:12rpx;
+  
+  
+  }
+  .userpwd {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top:44rpx;
+  }
+  .userpwd image{
+    width:63rpx;
+    height:59rpx;    
+    padding-top:12rpx;
+    
+  }
+  .verification_code{
+    position: relative;
+  }
+  .yanzhengm{
+    z-index: 10;
+  }
+  .yanzhengm button{
+    position:absolute;
+    right:5rpx;
+    top:-8rpx;
+    z-index: 10;
+    color: #30abee;  
+    font-size: 26rpx;
+    border: 0rpx;
+  
+  }

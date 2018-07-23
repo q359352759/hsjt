@@ -1,0 +1,226 @@
+/* pages/news/news.wxss */
+
+.swiper-tab{
+    width:750rpx;
+    height:200rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background:white;
+    text-align: center;
+    /* position: fixed; */
+}
+
+/* 切换 */
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 16.3%;  
+    
+    color: #777777;  
+}  
+.on{ color: #badffc;  
+    border-bottom: 5rpx solid #00a2e9;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.swiper-box view{  
+    /* text-align: center;   */
+}
+.swiper-tab-list image{
+    width: 100rpx;
+    height: 100rpx;
+    margin-bottom: 20rpx;
+}
+.spacing{
+    width: 750rpx;
+    height: 30rpx;
+    /* margin-top: 200rpx; */
+    background: #e5e3e3;
+}
+.mian{
+    padding: 20rpx;
+    /* padding-left: 10rpx; */
+}
+.main_center{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    height:150rpx;
+    border-bottom:1px solid #eee;
+    margin-top:22rpx;
+    
+
+}
+.pic image{
+    width: 100rpx;
+    height: 100rpx;
+
+}
+.textes{
+    font-size: 28rpx;
+    display: flex;
+    margin-left: 20rpx;
+    margin-top: 9rpx;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    
+}
+.textes text:first-child{
+   
+    text-indent: 9rpx;
+ }
+.textes text:last-child{
+    color: #aeaeae;
+   text-indent: 5rpx;
+}
+.main_center_l{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.time text{
+    color: #9a9a9a;
+    font-size: 25rpx;
+}
+.noteice_mian{
+    background: #e5e3e3;
+}
+.notice_content{
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 10rpx auto;
+    padding:10rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:215rpx;
+    margin-top: 20rpx;
+    /* align-items: center; */
+
+}
+.notice_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.notice_left text:first-child{
+    font-size: 28rpx;
+    padding-top: 20rpx;
+    color: black;
+
+}
+.notice_left text:nth-child(2){
+    font-size: 22rpx;
+    padding-top: 20rpx;
+    width: 345rpx;
+    color: black;
+
+}
+.notice_left text:last-child{
+    font-size: 18rpx;
+    padding-top: 20rpx;
+    color: #b9b9b9;
+
+}
+.notice_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.notice_right text{
+    font-size: 25rpx;
+    padding-top: 20rpx;
+    color: #b9b9b9;
+
+
+}
+.notice_right image{
+    width: 125rpx;
+    height: 107rpx;
+    padding-top: 20rpx;
+}
+.liaotian_l{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 20rpx;
+
+}
+.liaotian_l image{
+    width: 80rpx;
+    height: 80rpx;
+    margin-left: 20rpx;
+
+}
+.liaotian_l text{
+    font-size: 28rpx;
+    background: white;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    width: 397rpx;
+    margin-left: 20rpx;
+}
+.liaotian_r{
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: row;
+    margin-top: 60rpx;
+
+}
+.liaotian_r image{
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 20rpx;
+
+}
+.liaotian_r text{
+    font-size: 28rpx;
+    background: #ffdd48;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+    /* width: 277rpx; */
+}
+.userinput{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: fixed;
+    bottom: 20rpx;
+    left: 0rpx;
+
+}
+.userinput input{
+    width: 589rpx;
+    height:74rpx; 
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border-radius: 30rpx;
+    margin-right: 20rpx;
+
+}
+.userinput button{
+    width:121rpx;
+    height:74rpx;
+    color:#fff;
+    border:1px solid #dd524d;
+    background:#dd524d;
+    text-align:center;
+    border-radius:15rpx;
+    line-height: 74rpx;
+    padding-left: 20rpx;
+    /* margin-right:10rpx; */
+
+    font-size: 23rpx;
+    /* letter-spacing: 5rpx; */
+}
+.ther-button-hover{
+    background: #e5e3e3;
+}
+
+

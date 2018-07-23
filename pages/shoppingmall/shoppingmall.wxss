@@ -1,0 +1,121 @@
+/* pages/shoppingmall/shoppingmall.wxss */
+.shoppheader{
+    padding: 20rpx 20rpx 20rpx 0rpx;
+    /* padding-left: 10rpx; */
+    width: 750rpx;
+    height: 96rpx;
+    background: #164265;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    
+}
+.section input{
+    width: 400rpx;
+    height: 77rpx;
+    background: #72879a;
+    border-radius: 100px 100px 100px 100px;
+    padding-left: 100rpx;
+    color: white;
+
+}
+swiper{
+    width: 750rpx;
+    height: 240rpx;
+}
+
+.search{
+    position: absolute;
+    left: 20rpx;
+    top: 10rpx;
+    z-index: 2;
+}
+.search image{
+    width: 69rpx;
+    height: 70rpx;
+   
+}
+.sh_l image{
+    width: 70rpx;
+    height: 70rpx;
+}
+.icones{
+    width: 750rpx;
+    /* margin: auto; */
+    margin-top: 130rpx;
+}
+
+.home_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 62rpx;
+}
+
+.home_shoping{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home_pic{
+    width: 71rpx;
+    height: 68rpx;
+}
+.home_pic_text{
+    text-align: center;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+    /* float: left; */
+}
+.banner2 image{
+    width: 750rpx;
+    height: 146rpx;
+    margin-top: 30rpx;
+}
+
+shoppingItemGoods{
+    float: left;
+    margin-top: 60rpx; 
+}
+shoppingItemGoods:last-child{
+    clear: both;
+}
+shoppingItemGoods:nth-child(12){
+    clear: both;
+}
+
+.shopping_list_text{
+    font-size: 34rpx;
+    color: black;
+    text-align: center;
+    flex-grow: 1;
+}
+.shopping_list_text_more{
+    font-size: 25rpx;
+    color: black;
+    text-align: center;
+    margin-right: 10rpx;
+   
+}
+.shoping_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10rpx;
+    background: #f3f7f2;
+   
+}
+.affse{
+    height: 30rpx;
+    background:#f2f2f2;
+}

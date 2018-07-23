@@ -1,0 +1,332 @@
+/* pages/outprofit/outprofit.wxss */
+.porfit{
+    width: 750rpx;
+    height: 150rpx;
+    background: white;
+}
+.profit_top{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50rpx;
+
+}
+.fenrui{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fen_le{
+    padding-right: 50rpx;
+    border-right: 1px solid #cecbcb;
+}
+.paihaotext{
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.paihaotext view{
+    width: 38rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 25rpx;
+    color:white;
+    background: red;
+    margin-left: 4rpx;
+}
+.profit_text{
+    font-size:30rpx;
+    color: #00a2e9;
+    
+}
+.profit_text_l{
+    font-size:30rpx;
+    color: #00a2e9;
+    padding-left: 150rpx;
+    border-left: 1px solid #cecbcb;
+}
+.texts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rpx;
+}
+.myporfit{
+    margin-top: 103rpx;
+    width: 750rpx;
+    height:122rpx;
+    background: #00a2e9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.myporfit_l{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.myporfit_l_text{
+    font-size: 30rpx;
+    color: white;
+    padding-top: 10rpx;
+}
+.myprofit_t{
+    border: 1px solid white;
+    border-radius: 33rpx;
+    width:204rpx;
+    height:37rpx;    
+    text-align: center;
+    line-height: 37rpx;
+}
+swiper{
+    width:204rpx;
+    height:37rpx; 
+}
+
+
+.circle{
+    width: 70rpx;
+    height: 70rpx;
+    border: 1px solid white;
+    border-radius: 100rpx;
+    position: relative;
+}
+ .circle::after,
+ .circle::before{
+    width: 2rpx;
+    height: 37rpx;
+    content: '';
+    position: absolute;
+    left:32rpx;
+    top:-1px;
+    background: #FFFFFF;
+    z-index: 10;
+    transform-origin: 0.5px bottom; 
+}
+
+ .circle:after{
+    animation:after_animation 60s linear infinite;
+}
+ .circle:before{
+    animation:after_animation 5s linear infinite;
+}
+@keyframes after_animation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.classporfit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom:20rpx;
+
+    
+}
+.fenrui_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32rpx;
+    
+}
+.classporfit_text{
+    width:157rpx;
+    height:53rpx;
+    background:#00a2e9;
+    border-radius:32px;
+    text-align:center;
+    line-height:50rpx;
+    color:white;
+    font-size: 28rpx;
+    
+}
+.fenrui_content text:not(:first-child){
+    font-size: 30rpx;
+    color: red;
+}
+.contents{
+    border-left: 1px solid #cecbcb;
+    border-right: 1px solid #cecbcb;
+    padding-left:50rpx;
+    padding-right:50rpx;
+}
+.spacing{
+    height: 20rpx;
+    background: #f2f2f2;
+}
+.fenrui_record{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #dab040;
+    padding: 20rpx;
+}
+.fenrui_record text{
+    font-size: 31rpx;
+    color: white;
+}
+.time_class{
+    padding: 20rpx;
+    text-align: center;
+
+
+}
+.time_class ul li{
+    display: inline-block;
+    width: 132rpx;
+    height: 55rpx;
+    text-align: center;
+    line-height: 55rpx;
+    font-size:33rpx;
+    border-right: 1px solid #ed1414;
+    border-top: 1px solid #ed1414;
+    border-bottom: 1px solid #ed1414;
+
+}
+.time_class ul li:first-child{
+    border-left: 1px solid #ed1414;
+    border-bottom-left-radius: 30rpx;
+    border-top-left-radius: 30rpx;
+}
+.time_class ul li:last-child{
+  
+    border-bottom-right-radius: 30rpx;
+    border-top-right-radius: 30rpx;
+
+
+}
+.current2{
+    background: #00a2e9;
+    color: white;
+}
+
+.Arrow_1{
+    position:absolute;
+    height:48rpx;
+    width:3rpx;
+    top:-32rpx;
+    left:144rpx;
+    background:#fe0202;
+    text-align:center;
+    
+
+}
+ /* .Arrow_1:after{
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    left:20rpx;
+    height:10rpx;
+    width: 2rpx;
+    background: #f53e3e;
+    z-index: 1;
+    box-shadow: 0px 0px 1px 0.2px #f53e3e;
+} */
+/* .Arrow_1 text{ */
+    /* height:5rpx;
+    display: inline-block;
+    position: relative;
+    left:-18rpx;
+    top:-13rpx;
+    font-size:31rpx; */
+    /* transform:rotate(-90deg); */
+    /* z-index: 2;
+    margin: 0px;
+    color: #ed1414;
+    font-weight: bold; */
+/* }  */
+.Arrow_1 image{
+    width: 20rpx;
+    height: 20rpx;
+    position: relative;
+    top:-37rpx;
+    left:-8rpx;
+}
+.Arrow_1 image:nth-child(2){
+    width: 20rpx;
+    height: 20rpx;
+    position: absolute;
+    top:-37rpx;
+    left:-8rpx;
+}
+.Arrow_1 image:nth-child(3){
+    width: 20rpx;
+    height: 20rpx;
+    position: absolute;
+    top:-55rpx;
+    left:-8rpx;
+}
+
+.Arrow_1 image:nth-child(2),
+.Arrow_1 image:nth-child(3){
+    animation:Arrow_animation 0.5s linear infinite;
+}
+@keyframes Arrow_animation{ 
+     0%{
+        transform: translate(0px,0px);
+    }50%{
+        transform: translate(0px,-2px);
+    }100%{
+        transform: translate(0px,0px);
+    } 
+ } 
+ .all{
+    background: #f2f2f2;
+    overflow: hidden;
+ }
+
+ .header_time{
+     width: 750rpx;
+     height: 58rpx;
+     background: #dab040;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     margin-top: 20rpx;
+ }
+ .header_time text{
+    color: white;
+    font-size: 28rpx;
+    padding-right: 50rpx;
+ }
+ .record{
+    background: white;
+}
+ .fenrui_conetet{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     overflow: auto;
+     padding:31rpx 10rpx;
+     margin:0rpx 70rpx;
+    
+ }
+ .fenrui_conetet text{
+    color: #595959;
+    padding: 16rpx;
+    font-size: 27rpx;
+ }
+ .january_text{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .january_text text{
+    font-size: 28rpx;
+ }
+ 

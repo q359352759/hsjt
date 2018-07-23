@@ -1,0 +1,110 @@
+<block wx:for="{{[userdata]}}" wx:key="{{item.id}}" >
+<view class="spacing"></view>
+<view class="container">
+  <view class="info-cont">
+      <view class="infoMain">
+          <view class="info-items userimage" bindtap="setPhotoInfo">
+              <text>头像</text>
+              <view class="infotext userpic">
+                  <image wx:if="{{imgUrl!=null}}" class="userinfo-avatar" src="{{imgUrl}}" background-size="cover"></image>
+                  <image wx:else class="userinfo-avatar" src="{{item.photo}}" background-size="cover"></image>
+              
+                  <image  src="../../images/前进.png"></image>
+              </view>
+          </view>
+          <view class="info-items" bindtap="setName">
+              <text>昵称</text>
+              <view class="infotext">
+                <view >{{item.nick}}</view>  
+                <!-- <view wx:else >{{value}}</view>   -->
+                  <image  src="../../images/前进.png"></image>
+              </view>
+          </view>
+        <!--弹窗-->
+            <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+            <view class="modal-dialog" wx:if="{{showModal}}">
+            <view class="modal-title">请输入修改昵称</view>
+            <view class="modal-content">
+                <view class="modal-input">
+                <input placeholder-class="input-holder" type="text" maxlength="10" bindblur="inputChange" class="input" placeholder="请输入修改昵称"></input>
+                </view>
+            </view>
+            <view class="modal-footer">
+                <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+            </view>
+            </view>
+        <!--弹窗-->
+          <view class="info-items">
+              <text>账号</text>
+              <view class="infotext">
+                  <text>{{phone}}</text>
+                  <image  src="../../images/前进.png"></image>
+              </view>
+          </view>
+          <view class="info-items" bindtap="setLoginpPssword">
+              <text>登录密码</text>
+              <view class="infotext">
+                    <image  src="../../images/前进.png"></image>       
+              </view>
+          </view>
+          <view class="info-items" bindtap="ForgetPaypassword">
+              <text>支付密码</text>
+              <view class="infotext">
+                    <image  src="../../images/前进.png"></image>
+              </view>
+          </view>
+      </view>
+      <!-- <button type="warn"  bindtap="warn" class="buttonExit" > 保存 </button> -->
+  </view>
+</view>
+<view class="spacing"></view>
+<view class="container">
+        <view class="info-cont">
+            <view class="infoMain">
+               
+                <view class="info-items" bindtap="renzhegnsetName">
+                    <text>实名认证</text>
+                    <view class="infotext">
+                        <text>无</text>
+                        <image  src="../../images/前进.png"></image>
+                            <!-- <input type="text" class="info-motto" placeholder="{{userInfo.nickName}}"  placeholder-class="place-holder" value=""/> -->
+                    </view>
+                </view>
+                <view class="info-items" bindtap="addAddress" >
+                    <text>收货地址</text>
+                    <view class="infotext">
+                        <text>无</text>
+                        <image  src="../../images/前进.png"></image>
+                      <!-- <input type="text" class="info-motto" placeholder="12345678987"  placeholder-class="place-holder" value=""/> -->
+                    </view>
+                </view>
+                <view class="info-items" bindtap="Email">
+                    <text>邮箱</text>
+                    <view class="infotext">
+                            <text>{{item.email}}</text>
+                          <image  src="../../images/前进.png"></image>
+                    </view>
+                </view>
+    
+                 <!--弹窗-->
+                    <view class="modal-mask" bindtap="hideModalEmail" catchtouchmove="preventTouchMove" wx:if="{{showModalEmail}}"></view>
+                    <view class="modal-dialog" wx:if="{{showModalEmail}}">
+                    <view class="modal-title">请输入修改邮箱</view>
+                    <view class="modal-content">
+                        <view class="modal-input">
+                        <input placeholder-class="input-holder" type="text" maxlength="10" bindblur="inputChangeEmail" class="input" placeholder="请输入修改昵称"></input>
+                        </view>
+                    </view>
+                    <view class="modal-footer">
+                        <view class="btn-confirm" bindtap="onConfirmEmail" data-status="confirmEmail">确定</view>
+                    </view>
+                    </view>
+                <!--弹窗-->
+
+
+               
+            </view>
+            <button type="warn"  bindtap="warn" class="buttonExit" > 保存 </button>
+        </view>
+      </view>
+    </block>

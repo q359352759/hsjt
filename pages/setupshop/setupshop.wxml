@@ -1,0 +1,210 @@
+<!-- <scroll-view  scroll-y style="height:1000rpx;"> -->
+<view class="shoptype">
+ 
+    <view class="swiper-tab"> 
+            <view  class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav" >
+                 <text style="font-size:30rpx;color:black;"  data-current="0">实体店铺</text>
+            </view>
+
+             <view  class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" >
+                     <text style="font-size:30rpx;color:black" data-current="1">个人店铺</text>
+             </view>          
+    </view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300"  style="height:1600rpx" bindchange="bindChange"> 
+         <!-- 实体店铺 -->
+        <swiper-item> 
+            <view >
+                    <view class="spacing"></view>
+                    <view class="content">
+                    <view class="name">
+                        <label>法人姓名</label>
+                        <input type="text" placeholder="真实姓名"  bindblur="bindName" value="{{name}}" style="padding-left:16rpx;"/>
+                    </view>
+                    <view class="name">
+                            <label>店铺名</label>
+                            <input type="text" placeholder="店铺名"  bindblur="bindStor" value="{{storName}}" style="padding-left:48rpx;"/>
+                        </view>
+                    <view class="name">
+                            <label>身份证</label>
+                            <input type="text" placeholder="有效身份证"   bindblur="bindID" value="{{legalID}}" style="padding-left:48rpx;"/>
+                    </view>
+                        <view class="name">
+                        <label>手机号</label>
+                        <input type="number" maxlength="11" placeholder="11位手机号"   bindblur="bindPhone" value="{{userPhone}}" style="padding-left:48rpx;"/>
+                    </view>
+                    <view class="name">
+                            <label>行业分类</label>
+                                <picker bindchange="bindPickerChange"   range-key="categoryname"  data-value="{{index}}" range="{{industryData}}"> 
+                                        <input type="text" placeholder="点击选择行业分类"  value="{{industryData[index].categoryname}}" style="padding-left:14rpx;"/>
+                               </picker>        
+                    </view>
+                    <view class="name">
+                    <label>分润比例</label>
+                    <input type="text" placeholder="5%-60%"   bindblur="bindfraction" value="{{fraction}}" style="padding-left:14rpx;"/>
+                    </view>
+                    <view class="name">
+                        <label>经营地址</label>
+                        <textarea placeholder="经营地址"   value="{{address}}" ></textarea>
+                        </view>
+                    </view>
+                    <view class="spacing"></view>
+                    <view class="content" >
+                        <view class="name style_row"  bindtap="setPhotoStor" >
+                        <label>店铺首页</label>
+                        <view class="pic style_row">
+                                <view class="userinfo">
+                                        <image wx:if="{{imgUrl!=null}}" class="userinfo-avatar" src="{{imgUrl}}" background-size="cover"></image>
+                                </view>
+                                <view class="renzheng">
+                                        <image src="../../images/qian.png"></image>
+                                </view>   
+                        </view> 
+                    </view>
+                    <view class="name style_row"  bindtap="setLicense">
+                            <label>营业执照</label>
+                            <view class="pic style_row">
+                                    <view class="userinfo">
+                                            <image wx:if="{{imgUrl_2!=null}}" class="userinfo-avatar" src="{{imgUrl_2}}" background-size="cover"></image>
+                                    </view>
+                                    <view class="renzheng">
+                                            <image src="../../images/qian.png"></image>
+                                    </view>   
+                            </view> 
+                           
+                    </view>
+                    <view class="name ">
+                            <label>执照注册号</label>
+                            <input type="text" placeholder="注册号"   bindblur="bindLicense" value="{{license}}" style="padding-left:14rpx;"/>
+                        </view>
+
+                    </view>
+                    <view class="spacing"></view>
+                    <view class="content">
+                    <view class="name">
+                            <label>保障金</label>
+                            <input type="text"  bindblur="safeguards"  value="{{safeguards}}"  style="padding-left:14rpx;"/>
+                    </view>
+                        <view class="name">
+                                <label>营销顾问</label>
+                                <input type="text" placeholder="手机号必须真实有效"   bindblur="adviserPhone" value="{{adviserPhone}}"  style="padding-left:14rpx;"/>
+                            </view>
+                            <view class="name renzheng style_row">
+                                <label>商家合作协议</label>
+                                <image src="../../images/qian.png"></image>
+                           </view>
+                        <view class="btn" bindtap="addShop">
+                            <button>提交</button>
+                        </view>              
+                    </view>
+            </view>           
+        </swiper-item> 
+        <!-- 个人店铺 -->
+        <swiper-item>
+                <!-- 保障金隐藏区域 -->
+                <view class="choose hide{{showView?'show':''}}"  catchtap="hide"  wx:if="{{chooseSize}}" animation='{{animationData}}'>
+                        <view class="choose_top " ></view>
+                        <view class="choose_bottom ">
+                                <view class="choose_content style_clomn "   catchtap='changeOil' >
+                                        <view class='{{number==1?"active":""}} num style_row' data-num='1' data-text="暂不缴纳"  >
+                                                <text>暂不缴纳</text> 
+                                        </view>
+                                        
+                                        <view class='{{number==2?"active":""}} num style_row'  data-num='2' data-text="500">
+                                                <text>500元</text>
+                                                <button>充 值</button>
+                                        </view>
+
+                                        <view   class='{{number==3?"active":""}} num style_row' data-num='3' data-text="1500">
+                                                <text>1500元</text>
+                                                <button>充 值</button>
+                                        </view>
+
+                                        <view  class='{{number==4?"active":""}} num style_row' data-num='4' data-text="3000">
+                                                <text>3000元</text>
+                                                <button>充 值</button>
+                                        </view>
+                                </view>
+                        </view>
+                        
+                </view>
+                <view >
+                        <view class="spacing"></view>
+                        <view class="content">
+                        <view class="name">
+                                <label>姓名</label>
+                                <input type="text" placeholder="真实姓名"  bindblur="bindName" value="{{name}}" style="padding-left:16rpx;"/>
+                        </view>
+                        <view class="name">
+                                <label>店铺名</label>
+                                <input type="text" placeholder="店铺名"  bindblur="bindStor" value="{{storName}}" style="padding-left:48rpx;"/>
+                                </view>
+                        <view class="name">
+                                <label>身份证</label>
+                                <input type="text" placeholder="有效身份证"   bindblur="bindID" value="{{legalID}}" style="padding-left:48rpx;"/>
+                        </view>
+                                <view class="name">
+                                <label>手机号</label>
+                                <input type="number" maxlength="11" placeholder="11位手机号"   bindblur="bindPhone" value="{{userPhone}}" style="padding-left:48rpx;"/>
+                        </view>
+                        <view class="name">
+                                <label>行业分类</label>
+                                        <picker bindchange="bindPickerChange"   range-key="categoryname"  data-value="{{index}}" range="{{industryData}}"> 
+                                                <input type="text" placeholder="点击选择行业分类"  value="{{industryData[index].categoryname}}" style="padding-left:14rpx;"/>
+                                        </picker>        
+                        </view>
+                        <view class="name renzheng style_row">
+                                <label>实名认证</label>
+                                <image src="../../images/qian.png"></image>
+                        </view>
+                        
+                        <view class="spacing"></view>
+                        <view class="name">
+                                        <label>经营地址</label>
+                                        <textarea placeholder="经营地址"   value="{{address}}" ></textarea>
+                                        </view>
+                                        </view>
+                        <view class="content" >
+                                <view class="name style_row"  bindtap="setPhotoStor" >
+                                <label>店铺首页</label>
+                                <view class="pic style_row">
+                                        <view class="userinfo">
+                                                <image wx:if="{{imgUrl!=null}}" class="userinfo-avatar" src="{{imgUrl}}" background-size="cover"></image>
+                                        </view>
+                                        <view class="renzheng">
+                                                <image src="../../images/qian.png"></image>
+                                        </view>   
+                                </view> 
+                        </view>
+                        <view class="name">
+                                <label>分润比例</label>
+                                <input type="text" placeholder="5%-60%"   bindblur="bindfraction" value="{{fraction}}" style="padding-left:14rpx;"/>
+                        </view>
+                        </view>
+                        <view class="spacing"></view>
+                        <view class="content">
+                        <view class="name renzheng style_row " bindtap="handeClicksafe" >
+                                <label>保障金</label>
+                                <input type="text"   value="{{text}}" style="padding-left:14rpx;"/>
+                                <image src="../../images/qian.png"></image>
+                                </view>
+
+                                <view class="name">
+                                        <label>营销顾问</label>
+                                        <input type="text" placeholder="手机号必须真实有效"   bindblur="adviserPhone" value="{{adviserPhone}}"  style="padding-left:14rpx;"/>
+                                </view>
+                                <view class="name renzheng style_row">
+                                        <label>商家合作协议</label>
+                                        <image src="../../images/qian.png"></image>
+                                </view>
+                                <view class="btn" bindtap="addShop">
+                                <button>提交</button>
+                                </view>              
+                        </view>
+                </view>
+        </swiper-item>  
+    </swiper> 
+<!-- </scroll-view> -->
+
+
+
